@@ -1,0 +1,16 @@
+version: "3.5"
+
+services: 
+  portfolio-v2:
+   container_name: portfolio-v2
+   build: 
+    context: .
+    dockerfile: Dockerfile.dev
+   restart: always
+   ports:
+    - 3000:3000
+   volumes:
+    - .:/app/portfolio-v2
+    - /app/portfolio-v2/node_modules
+    - /app/portfolio-v2/.next
+ 
