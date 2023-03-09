@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Button from '@/components/Button'
 
 export default function NavBar() {
   return (
@@ -9,17 +9,14 @@ export default function NavBar() {
             Gabriel S.Maciel
           </h1>
         </div>
-        <ul className="flex flex-row">
-          <li className="flex items-center">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="flex items-center">
-            <Link href="/about">About</Link>
-          </li>
-          <li className="flex items-center">
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
+        <div className="flex flex-row">
+          <div className="w-24 mr-4">
+            <Button label="Sobre" />
+          </div>
+          <div className="w-24">
+            <Button label="Contato" variant="secondary" />
+          </div>
+        </div>
       </div>
     </nav>
   )
