@@ -25,7 +25,7 @@ RUN npm run build && \
     find . -name "*.test.*" -delete
 
 
-FROM mhart/alpine-node:slim-14 AS runner 
+FROM base AS runner 
 WORKDIR /app/portfolio-v2
 
 ENV NODE_ENV production
