@@ -11,3 +11,23 @@
         @apply w-screen;
 
     }
+
+
+    @layer components {
+    
+    .btn-primary {
+        @apply w-full h-10 ;
+        @apply bg-primary text-secondary ;
+        @apply font-semibold ;
+        @apply rounded-lg;
+        @apply hover:bg-hover-button-primary hover:transition-colors hover:duration-500;
+    }
+    .btn-secondary {
+        @apply w-full h-10;
+        @apply bg-secondary text-primary;
+        @apply hover:bg-primary hover:text-secondary hover:transition-colors hover:duration-500;
+        @apply font-semibold;
+        @apply border-solid border-primary border-2 rounded-lg;
+    }
+    
+    }

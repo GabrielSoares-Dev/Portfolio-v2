@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         primary: '#990011FF',
         secondary: '#FCF6F5FF',
+        'hover-button-primary': '#b30014',
       },
     },
   },
