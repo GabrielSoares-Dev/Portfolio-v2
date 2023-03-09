@@ -15,4 +15,4 @@ jobs:
           type: now
           from_branch: development
           target_branch: main
-          github_token: ${{ secrets.TOKEN_ACTION_GIT }}
+          github_token: ${{ secrets.GIT_ACCESS_TOKEN }}
