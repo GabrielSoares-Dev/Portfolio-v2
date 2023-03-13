@@ -1,6 +1,5 @@
 'use client'
 import usePage from '@/hooks/usePage/usePage'
-import { useEffect } from 'react'
 export default function About() {
   const { currentPage, setCurrentPage } = usePage()
   console.log(currentPage)
