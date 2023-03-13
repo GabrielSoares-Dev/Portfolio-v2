@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
     body {
         @apply m-0;
         @apply p-0;
@@ -9,6 +15,7 @@
         @apply bg-secondary;
         @apply h-screen;
         @apply w-screen;
+       
 
     }
 
@@ -28,6 +35,14 @@
         @apply hover:bg-primary hover:text-secondary hover:transition-colors hover:duration-500;
         @apply font-semibold;
         @apply border-solid border-primary border-2 rounded-lg;
+    }
+
+    .nav-link{
+       @apply text-white text-lg font-semibold uppercase;
+       @apply hover:text-primary hover:transition hover:duration-700;
+    }
+    .nav-link-active{
+      @apply  text-primary text-lg font-semibold uppercase;
     }
     
     }
