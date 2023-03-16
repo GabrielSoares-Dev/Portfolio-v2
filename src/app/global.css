@@ -5,6 +5,11 @@
 @layer base {
   html {
     font-family: 'Poppins', sans-serif;
+    
+  }
+  h1,h2,h3,h4,h5,h6,p,span {
+    @apply tracking-wide;
+
   }
 }
 
@@ -15,6 +20,7 @@
         @apply bg-secondary;
         @apply h-screen;
         @apply w-screen;
+      
        
 
     }
@@ -38,11 +44,11 @@
     }
 
     .nav-link{
-       @apply text-white text-lg font-semibold uppercase;
+       @apply text-white text-lg font-semibold uppercase tracking-wide;
        @apply hover:text-primary hover:transition hover:duration-700;
     }
     .nav-link-active{
-      @apply  text-primary text-lg font-semibold uppercase;
+      @apply  text-primary  font-semibold uppercase;
     }
     
     }

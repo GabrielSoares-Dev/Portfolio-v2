@@ -3,6 +3,7 @@ import React from 'react'
 import '@/app/global.css'
 import Head from 'next/head'
 import NavBar from '@/components/Layout/NavBar'
+import PageContextProvider from '@/context/PageContext/PageContext'
 
 export const metadata = {
   title: 'Gabriel Soares Maciel',
@@ -34,8 +35,10 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <NavBar />
-        {children}
+        <PageContextProvider>
+          <NavBar />
+          {children}
+        </PageContextProvider>
       </body>
     </html>
   )
