@@ -3,4 +3,5 @@ import { ReactNode } from 'react'
 export interface NavLinkProps extends LinkProps {
   children?: ReactNode
   label: string
+  isActive: boolean
 }

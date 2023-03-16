@@ -13,6 +13,9 @@ module.exports = {
         secondary: '#000000',
         'hover-button-primary': '#b30014',
       },
+      padding: {
+        '21rem': '21rem',
+      },
     },
   },
   plugins: [],

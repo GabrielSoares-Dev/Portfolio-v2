@@ -1,14 +1,9 @@
 'use client'
-import usePage from '@/hooks/usePage/usePage'
+import useAbout from './hooks/useAbout'
 export default function About() {
-  const { currentPage, setCurrentPage } = usePage()
-  console.log(currentPage)
+  const { ref } = useAbout()
   return (
-    <section
-      onScroll={() => setCurrentPage('CONTACT')}
-      id="about"
-      className="container"
-    >
+    <section ref={ref} id="about" className="container">
       <div className="bg-primary w-screen h-96 p-28">
         <div>
           <h1 className="text-white text-center text-3xl font-bold">
