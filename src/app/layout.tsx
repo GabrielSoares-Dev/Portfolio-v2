@@ -35,10 +35,8 @@ export default function RootLayout({
       </Head>
 
       <body>
-        <PageContextProvider>
-          <NavBar />
-          {children}
-        </PageContextProvider>
+        <NavBar />
+        <PageContextProvider>{children}</PageContextProvider>
       </body>
     </html>
   )
