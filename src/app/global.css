@@ -30,18 +30,14 @@
     
     .btn-primary {
         @apply w-full h-10 ;
-        @apply bg-primary text-secondary ;
-        @apply font-semibold ;
-        @apply rounded-lg;
-        @apply hover:bg-hover-button-primary hover:transition-colors hover:duration-500;
+        @apply bg-primary text-white;
+        @apply border-2 border-primary;         
+        @apply font-semibold text-sm ;
+        @apply rounded-3xl;
+        @apply hover:bg-black hover:text-primary hover:scale-105 hover:transition-all  hover:duration-500;
     }
-    .btn-secondary {
-        @apply w-full h-10;
-        @apply bg-secondary text-primary;
-        @apply hover:bg-primary hover:text-secondary hover:transition-colors hover:duration-500;
-        @apply font-semibold;
-        @apply border-solid border-primary border-2 rounded-lg;
-    }
+  
+    
 
     .nav-link{
        @apply text-white text-lg font-semibold uppercase tracking-wide;
