@@ -1,11 +1,14 @@
-import Introduction from '@/app/(components)/Introduction'
-import About from '@/app/(components)/About'
+import Introduction from '@app/(components)/Introduction'
+import Services from '@app/(components)/Services'
+
+// import About from '@/app/(components)/About'
 
 export default function Home() {
   return (
-    <>
+    <div className="w-screen">
       <Introduction />
-      <About />
-    </>
+      <Services />
+      {/* <About /> */}
+    </div>
   )
 }
