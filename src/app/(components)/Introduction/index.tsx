@@ -1,12 +1,13 @@
 'use client'
-
 import useIntroduction from './hooks/useIntroduction'
+import Button from '@/components/Button'
+import Image from 'next/image'
 
 export default function Introduction() {
   const { ref } = useIntroduction()
   return (
     <section id="introduction" className="container h-screen">
-      <div className="flex flex-row  lg:px-52 2xl:px-[21rem]">
+      <div className="flex flex-row justify-evenly  lg:px-52 2xl:px-[21rem]">
         <div className="flex flex-col">
           <div className="flex justify-start mt-52">
             <h1 ref={ref} className="text-4xl text-primary font-bold">
@@ -24,10 +25,8 @@ export default function Introduction() {
               Websites,Aplicações Mobiles,Apis e muito mais...
             </p>
           </div>
-        </div>
-        <div>
-          <div>
-            <h1 className="text-primary">test</h1>
+          <div className="w-32 mt-8">
+            <Button label="Contrate-me" />
           </div>
         </div>
       </div>
