@@ -5,7 +5,7 @@ import Services from '@app/(components)/Services'
 
 export default function Home() {
   return (
-    <div className="w-screen">
+    <div>
       <Introduction />
       <Services />
       {/* <About /> */}

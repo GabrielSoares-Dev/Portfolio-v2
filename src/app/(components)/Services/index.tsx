@@ -9,9 +9,9 @@ export default function Services() {
         </h1>
       </div>
       <div className="flex justify-center my-20">
-        {Cards.map((element, index) => (
+        {Cards.map((element) => (
           <Card
-            key={index}
+            key={element.id}
             Icon={element.Icon}
             text={element.text}
             title={element.title}
