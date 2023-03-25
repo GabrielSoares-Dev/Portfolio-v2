@@ -3,7 +3,7 @@ import NavLink from '@/components/NavLink'
 import useNav from './hooks/useNav'
 
 export default function NavBar() {
-  const { isAbout, isIntroduction } = useNav()
+  const { isAbout, isIntroduction, isServices } = useNav()
   return (
     <nav className="w-screen h-20 bg-secondary fixed ">
       <div className="flex justify-around py-6">
@@ -22,7 +22,7 @@ export default function NavBar() {
             <NavLink isActive={isAbout} href="/#about" label="SOBRE" />
           </div>
           <div className="mx-3">
-            <NavLink isActive={false} href="/" label="SERVIÇOS" />
+            <NavLink isActive={isServices} href="/" label="SERVIÇOS" />
           </div>
           <div className="mx-3">
             <NavLink isActive={false} href="/" label="CONTATO" />

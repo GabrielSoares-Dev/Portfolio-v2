@@ -1,8 +1,15 @@
+'use client'
 import Card from './components/Card'
 import Cards from './domains/cards'
+import { useServices } from './hooks'
 export default function Services() {
+  const { ref } = useServices()
   return (
-    <div className="container  w-screen mt-24 mx-auto ">
+    <section
+      id="services"
+      ref={ref}
+      className="container  w-screen mt-52 mx-auto "
+    >
       <div className="flex justify-center">
         <h1 className="text-white text-4xl font-bold">
           MEUS <span className="text-primary">SERVIÇOS</span>
@@ -18,6 +25,6 @@ export default function Services() {
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
