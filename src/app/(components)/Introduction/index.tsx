@@ -2,6 +2,8 @@
 'use client'
 import { useIntroduction } from './hooks'
 import Button from '@/components/Button'
+import Lottie from 'react-lottie'
+import options from '@/constants/developer-animation-options'
 
 export default function Introduction() {
   const { ref } = useIntroduction()
@@ -34,13 +36,8 @@ export default function Introduction() {
             </div>
           </div>
 
-          <div className="h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-auto xl:w-5/12">
-            <img
-              src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
-              loading="lazy"
-              alt="Photo by Fakurian Design"
-              className="h-full w-full object-cover object-center"
-            />
+          <div className="h-48 overflow-hidden  lg:h-auto xl:w-5/12">
+            <Lottie options={options} isClickToPauseDisabled />
           </div>
         </section>
       </div>
