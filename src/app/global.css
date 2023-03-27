@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-    
-  }
+
   h1,h2,h3,h4,h5,h6,p,span {
     @apply tracking-wide;
 
@@ -23,15 +20,26 @@
 
 
     @layer components {
+     
     
     .btn-primary {
-        @apply w-full h-10 ;
+        @apply w-full h-10  ;
         @apply bg-primary text-white;
         @apply border-2 border-primary;         
         @apply font-semibold text-sm ;
         @apply rounded-3xl;
-        @apply hover:bg-black hover:text-primary hover:scale-105 hover:transition-all  hover:duration-500;
+        @apply hover:bg-black hover:text-primary hover:transition-all  hover:duration-500;
     }
+
+    .btn-secondary {
+        @apply w-full h-10 ;
+        @apply bg-black text-primary;
+        @apply border-2 border-primary;         
+        @apply font-semibold text-sm ;
+        @apply rounded-3xl;
+        @apply hover:bg-primary hover:text-white  hover:transition-all  hover:duration-500;
+    }
+  
   
     
 
