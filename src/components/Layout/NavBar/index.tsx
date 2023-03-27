@@ -5,7 +5,7 @@ import useNav from './hooks/useNav'
 export default function NavBar() {
   const { isAbout, isIntroduction, isServices } = useNav()
   return (
-    <nav className=" h-20 bg-secondary mb-20  ">
+    <nav className=" hidden h-20 bg-secondary mb-20 md:block">
       <div className="flex justify-around py-6">
         <div>
           <h1 className="text-2xl font-extrabold text-primary m-0">SOARES</h1>
