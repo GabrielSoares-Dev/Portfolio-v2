@@ -36,7 +36,7 @@ export default function Introduction() {
             </div>
           </div>
 
-          <div className="h-72 overflow-hidden cursor-none  lg:h-auto xl:w-5/12">
+          <div className="h-72 overflow-hidden   lg:h-auto xl:w-5/12">
             <Lottie options={options} isClickToPauseDisabled />
           </div>
         </section>
