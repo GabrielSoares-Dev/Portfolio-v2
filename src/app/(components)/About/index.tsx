@@ -9,6 +9,11 @@ export default function About() {
   return (
     <section className="py-36 bg-blueGray-50 overflow-hidden">
       <div className="container px-4 mx-auto">
+        <div className="flex justify-center mb-32">
+          <h1 className="text-white mb-8 text-4xl font-bold  md:mb-12 md:text-5xl">
+            SOBRE
+          </h1>
+        </div>
         <div className="flex flex-wrap lg:items-center -m-8 lg:-m-14">
           <div className="w-full md:w-1/2 p-8 lg:p-14">
             <div className="relative max-w-max mx-auto lg:ml-auto lg:mr-0 overflow-hidden rounded-2xl">
