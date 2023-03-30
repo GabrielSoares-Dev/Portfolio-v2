@@ -1,22 +1,16 @@
 import type { CardServicesProps } from './types'
 
-export default function Card({ title, text, Icon }: CardServicesProps) {
+export default function Card({ Icon, text, title }: CardServicesProps) {
   return (
-    <div className="w-[20rem] h-[18rem] border-2 mx-[80px]  border-white">
-      <div className="flex items-center flex-col mt-14">
-        <div>
-          <Icon className="fill-primary" fontSize={70} />
+    <div className="w-full mt-5 md:w-1/2 lg:w-1/3 px-4">
+      <div className="h-full p-8 text-center border-2  rounded-md hover:shadow-xl border-primary transition duration-200">
+        <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center justify-center bg-green-500 rounded-lg">
+          <Icon className="fill-white" fontSize={30} />
         </div>
-        <div className="mt-5">
-          <h3 className="text-white uppercase font-semibold text-lg">
-            {title}
-          </h3>
-        </div>
-        <div className="mt-2">
-          <p className="text-white text-sm leading-5 text-center w-56 font-medium">
-            {text}
-          </p>
-        </div>
+        <h3 className="mb-4 text-xl text-white md:text-2xl leading-tight font-bold">
+          {title}
+        </h3>
+        <p className="text-gray-500 font-medium">{text}</p>
       </div>
     </div>
   )
