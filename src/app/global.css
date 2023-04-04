@@ -40,8 +40,6 @@
         @apply hover:bg-primary hover:text-white  hover:transition-all  hover:duration-500;
     }
   
-  
-    
 
     .nav-link{
        @apply text-white text-lg font-semibold uppercase tracking-wide;
@@ -49,6 +47,9 @@
     }
     .nav-link-active{
       @apply  text-primary  font-semibold uppercase;
+    }
+    .badge {
+    @apply inline-block py-px px-2 mb-4 text-xs leading-5 text-primary border-2 border-primary bg-black font-medium uppercase rounded-full shadow-sm;
     }
     
     }

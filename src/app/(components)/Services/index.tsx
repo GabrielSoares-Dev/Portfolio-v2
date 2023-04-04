@@ -2,6 +2,7 @@
 import Card from './components/Card'
 import Cards from './domains/cards'
 import { useServices } from './hooks'
+import Badge from '@/components/Badge'
 
 export default function Services() {
   const { ref } = useServices()
@@ -15,9 +16,7 @@ export default function Services() {
     >
       <div className="container px-4 mx-auto">
         <div className="md:max-w-4xl mb-12 mx-auto text-center">
-          <span className="inline-block py-px px-2 mb-4 text-xs leading-5 text-green-500 bg-green-100 font-medium uppercase rounded-full shadow-sm">
-            Serviços
-          </span>
+          <Badge content="SERVIÇOS" />
           <h1 className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
             Transformando ideias em realidade através da tecnologia
           </h1>
