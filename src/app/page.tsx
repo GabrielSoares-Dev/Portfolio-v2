@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div>
       <Introduction />
-      <About />
       <Services />
+      <About />
     </div>
   )
 }
