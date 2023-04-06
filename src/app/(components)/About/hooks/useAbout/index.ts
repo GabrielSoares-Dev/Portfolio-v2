@@ -8,11 +8,12 @@ export function useAbout() {
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
 
+
   useEffect(() => {
     if (isInView) {
       setCurrentPage('ABOUT')
     }
-  }, [isInView])
+  }, [isInView, setCurrentPage])
 
   return {
     ref,
