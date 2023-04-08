@@ -20,7 +20,7 @@ export default function Services() {
           <h1 className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
             Transformando ideias em realidade através da tecnologia
           </h1>
-          <p className=" text-gray-500 text-lg md:text-xl text-coolGray-500 font-medium">
+          <p className="text-gray-500 text-lg md:text-xl font-medium">
             Ofereço serviços de desenvolvimento de software personalizado,
             aplicativos móveis, websites e APIs para ajudar empresas e
             empreendedores a atingir seus objetivos de negócios com soluções

@@ -21,9 +21,10 @@ export default function Introduction() {
             </h1>
 
             <p className="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">
-              Sou apaixonado pelo desenvolvimento, costumo dizer que programar
-              não é um trabalho e sim uma arte, então tenho total certeza que
-              satisfarei suas necessidades.
+              Desenvolver é minha paixão. Transformar ideias em realidade é o
+              que me move. A cada código escrito, a cada problema resolvido,
+              sinto-me mais próximo do meu propósito. Não é apenas uma
+              profissão, é um estilo de vida.
             </p>
 
             <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
