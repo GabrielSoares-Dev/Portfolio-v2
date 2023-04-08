@@ -4,6 +4,7 @@ import '@/app/global.css'
 import Head from 'next/head'
 import NavBar from '@/components/Layout/NavBar'
 import PageContextProvider from '@/context/PageContext/PageContext'
+import Footer from '@/components/Layout/Footer'
 
 export const metadata = {
   title: 'Gabriel Soares Maciel',
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         <PageContextProvider>{children}</PageContextProvider>
+        <Footer />
       </body>
     </html>
   )
