@@ -17,7 +17,9 @@ export default function Skils() {
         </div>
         <div>
           <div className="flex justify-center mb-5">
-            <Badge content="FRONTEND" />
+            <h1 className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
+              Frontend
+            </h1>
           </div>
           <div className="flex flex-wrap max-w-5xl mx-auto -m-3">
             {CardsFrotend.map((element) => (
@@ -25,9 +27,11 @@ export default function Skils() {
             ))}
           </div>
         </div>
-        <div>
-          <div className="flex justify-center mb-10">
-            <Badge content="BACKEND" />
+        <div className="mt-10">
+          <div className="flex justify-center">
+            <h1 className=" text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter">
+              Backend
+            </h1>
           </div>
           <div className="flex flex-wrap max-w-5xl mx-auto mt-10">
             {CardsBackend.map((element) => (
