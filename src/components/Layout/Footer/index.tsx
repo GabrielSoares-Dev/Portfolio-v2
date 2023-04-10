@@ -3,7 +3,7 @@ export default function Footer() {
     <section className="bg-black">
       <div className="container px-4 mx-auto">
         <div className="pt-24  mx-auto max-w-4xl">
-          <a className="flex justify-center md:mx-auto max-w-max" href="#">
+          <a className="flex justify-center md:mx-auto " href="#">
             <h1 className="text-2xl text-center font-extrabold text-primary m-0">
               SOARES
             </h1>
