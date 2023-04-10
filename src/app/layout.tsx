@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import React from 'react'
 import '@/app/global.css'
 import Head from 'next/head'
