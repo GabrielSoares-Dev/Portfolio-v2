@@ -3,6 +3,7 @@ import Services from '@app/(components)/Services'
 import About from '@/app/(components)/About'
 import Skils from './(components)/Skils'
 import Contact from './(components)/Contact'
+import CallToChat from './(components)/CallToChat'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       {/* <Skils /> */}
       <About />
       <Contact />
+      <CallToChat />
     </div>
   )
 }

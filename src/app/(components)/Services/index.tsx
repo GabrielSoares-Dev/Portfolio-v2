@@ -10,7 +10,6 @@ export default function Services() {
     <section
       className="py-24 md:pb-32 bg-black"
       style={{
-        backgroundImage: "url('flex-ui-assets/elements/pattern-white.svg')",
         backgroundPosition: 'center',
       }}
     >
