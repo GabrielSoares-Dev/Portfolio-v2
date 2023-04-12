@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion'
 
 export function useServices() {
   const ref = useRef(null)
-  const isInView = useInView(ref)
+  const isInView = useInView(ref, { once: true })
   const { setCurrentPage } = usePage()
 
   useEffect(() => {
@@ -16,5 +16,6 @@ export function useServices() {
 
   return {
     ref,
+    isInView,
   }
 }
