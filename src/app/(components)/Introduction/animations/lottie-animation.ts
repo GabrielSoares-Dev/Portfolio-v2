@@ -1,11 +1,11 @@
 export const lottieAnimation = {
   initial: {
     opacity: 0,
-    x: 100,
+    y: -100,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
   },
   transition: {
     duration: 1,

@@ -50,7 +50,7 @@ export default function Introduction() {
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                className="text-white mb-8 text-4xl font-bold sm:text-5xl md:mb-12 md:text-6xl"
+                className="text-white mb-8 text-4xl font-bold sm:text-5xl xl:text-4xl  md:mb-12 2xl:text-6xl"
               />
             </motion.div>
 
