@@ -1,7 +1,7 @@
 export const buttonMyWorkAnimation = {
   initial: {
     opacity: 0,
-    x: -100,
+    x: 100,
   },
   animate: {
     opacity: 1,
@@ -15,7 +15,7 @@ export const buttonMyWorkAnimation = {
 
 export const buttonContactAnimation = {
   initial: {
-    x: 100,
+    x: -100,
     opacity: 0,
   },
   animate: {
