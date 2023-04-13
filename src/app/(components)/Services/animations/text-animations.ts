@@ -5,7 +5,7 @@ export const badgeAnimation = (isInView: boolean) => ({
   },
   transition: {
     duration: 1,
-    delay: 1,
+    delay: 1.2,
   },
 })
 
@@ -16,7 +16,7 @@ export const titleAnimation = (isInView: boolean) => ({
   },
   transition: {
     duration: 1,
-    delay: 0.6,
+    delay: 0.9,
   },
 })
 export const descriptionAnimation = (isInView: boolean) => ({
@@ -26,6 +26,6 @@ export const descriptionAnimation = (isInView: boolean) => ({
   },
   transition: {
     duration: 1,
-    delay: 0.3,
+    delay: 0.6,
   },
 })

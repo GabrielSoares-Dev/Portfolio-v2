@@ -2,10 +2,27 @@
 import type { CardServicesProps } from './types'
 import { motion } from 'framer-motion'
 
-export default function Card({ Icon, text, title }: CardServicesProps) {
+export default function Card({
+  Icon,
+  text,
+  title,
+  animation,
+}: CardServicesProps) {
   return (
-    <div className="w-full mt-5 md:w-1/2 lg:w-1/3 px-4">
-      <motion.div className="h-full p-8 text-center border-2 border-primary  rounded-md hover:shadow-xl transition duration-200">
+    <motion.div
+      animate={{
+        y: animation?.isInView ? 0 : -130,
+        opacity: animation?.isInView ? 1 : 0,
+      }}
+      transition={{ duration: 1, delay: 0.3 }}
+      className="w-full mt-5 md:w-1/2 lg:w-1/3 px-4"
+    >
+      <motion.div
+        whileHover={{
+          rotate: 360,
+        }}
+        className="h-full p-8 text-center border-2 cursor-pointer border-primary  rounded-md hover:shadow-xl transition duration-200"
+      >
         <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center bg-black rounded-lg">
           <Icon className="fill-primary" fontSize={30} />
         </div>
@@ -14,6 +31,6 @@ export default function Card({ Icon, text, title }: CardServicesProps) {
         </h3>
         <p className="text-gray-500 font-medium">{text}</p>
       </motion.div>
-    </div>
+    </motion.div>
   )
 }
