@@ -45,6 +45,9 @@ export default function Services() {
         <div className="flex flex-wrap -mx-4">
           {Cards.map((element) => (
             <Card
+              animation={{
+                isInView,
+              }}
               key={element.id}
               title={element.title}
               Icon={element.Icon}
