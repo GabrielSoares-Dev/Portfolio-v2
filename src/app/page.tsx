@@ -11,7 +11,7 @@ export default function Home() {
       <Introduction />
       <Services />
       {/* <Skils /> */}
-      <About />
+      {/* <About /> */}
       <Contact />
       <CallToChat />
     </div>
