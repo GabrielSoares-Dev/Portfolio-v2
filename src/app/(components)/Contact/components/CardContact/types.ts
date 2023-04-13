@@ -1,5 +1,8 @@
 import { IconType } from 'react-icons'
 
+type animation = {
+  isInView: boolean
+}
 type Socials = {
   id: number
   Icon: IconType
@@ -10,4 +13,5 @@ export type CardContactProps = {
   text: string
   Icon: IconType
   socials?: Socials[]
+  animation?: animation
 }
