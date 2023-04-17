@@ -8,7 +8,23 @@
     @apply tracking-wide;
 
   }
+  *{
+    cursor:none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+      background-color: #08d665; 
+      border-radius: 20px;        
+      border: 1px solid #08d665;
+  }
 }
+
 
     body {
         @apply m-0;
@@ -29,6 +45,7 @@
         @apply font-semibold text-sm ;
         @apply rounded-3xl;
         @apply hover:bg-black hover:text-primary hover:transition-all  hover:duration-500;
+        @apply cursor-none;
     }
 
     .btn-secondary {
@@ -37,6 +54,7 @@
         @apply border-2 border-primary;         
         @apply font-semibold text-sm ;
         @apply rounded-3xl;
+        @apply cursor-none;
         @apply hover:bg-primary hover:text-white  hover:transition-all  hover:duration-500;
     }
   
