@@ -12,5 +12,5 @@ export type CardExperienceProps = {
   position: string
   where: where
   dateInPosition: string
-  animation: animation
+  animation?: animation
 }
