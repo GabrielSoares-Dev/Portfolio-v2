@@ -21,7 +21,7 @@ export default function Card({
         whileHover={{
           rotate: 1,
         }}
-        className="h-full p-8 text-center border-2 cursor-pointer border-primary  rounded-md hover:shadow-xl transition duration-200"
+        className="h-full p-8 text-center border-2  border-primary  rounded-md hover:shadow-xl transition duration-200"
       >
         <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center bg-black rounded-lg">
           <Icon className="fill-primary" fontSize={30} />
