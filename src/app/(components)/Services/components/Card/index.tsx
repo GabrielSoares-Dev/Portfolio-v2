@@ -19,7 +19,7 @@ export default function Card({
     >
       <motion.div
         whileHover={{
-          rotate: 360,
+          rotate: 1,
         }}
         className="h-full p-8 text-center border-2 cursor-pointer border-primary  rounded-md hover:shadow-xl transition duration-200"
       >
