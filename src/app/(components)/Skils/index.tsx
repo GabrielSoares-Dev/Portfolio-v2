@@ -1,6 +1,6 @@
 import Badge from '@components/Badge'
-import CardsFrotend from './domains/cards-frotend'
-import CardsBackend from './domains/cards-backend'
+import CardsFrotend from './objects/cards-frotend'
+import CardsBackend from './objects/cards-backend'
 import Card from './components/Card'
 
 export default function Skils() {

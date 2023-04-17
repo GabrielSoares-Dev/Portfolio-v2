@@ -1,6 +1,6 @@
 'use client'
 import Card from './components/Card'
-import Cards from './domains/cards'
+import Cards from './objects/cards'
 import { useServices } from './hooks'
 import Badge from '@/components/Badge'
 import { motion } from 'framer-motion'

@@ -9,7 +9,7 @@ import {
   descriptionAnimation,
 } from './animations'
 
-import Cards from './domains/cards'
+import Cards from './objects/cards'
 export default function Contact() {
   const { isInView, ref } = useContact()
   return (

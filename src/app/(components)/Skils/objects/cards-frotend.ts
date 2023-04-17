@@ -4,7 +4,6 @@ import {
   SiTypescript,
   SiMui,
   SiStyledcomponents,
-  SiChakraui,
   SiAntdesign,
 } from 'react-icons/si'
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaBootstrap } from 'react-icons/fa'
