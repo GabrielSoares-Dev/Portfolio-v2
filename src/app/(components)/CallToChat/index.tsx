@@ -18,7 +18,7 @@ export default function CallToChat() {
             animate={titleAnimation(isInView).animate}
             transition={titleAnimation(isInView).transition}
             className="mb-4 text-white text-3xl md:text-4xl font-heading font-bold"
-            contentEditable="false"
+            contentEditable={false}
           >
             Converse comigo agora mesmo
           </motion.h2>
