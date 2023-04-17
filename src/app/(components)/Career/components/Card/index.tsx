@@ -9,8 +9,8 @@ export default function CardExperience({
 }: CardExperienceProps) {
   return (
     <motion.div
-      animate={cardAnimation(animation.isInView).animate}
-      transition={cardAnimation(animation.isInView).transition}
+      animate={cardAnimation(animation!.isInView).animate}
+      transition={cardAnimation(animation!.isInView).transition}
       className="max-w-3xl mx-auto"
     >
       <motion.div
