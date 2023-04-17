@@ -1,1 +1,1 @@
-export { CardExperienceProps } from './card-experience-props'
+export type { CardExperienceProps } from './card-experience-props'
