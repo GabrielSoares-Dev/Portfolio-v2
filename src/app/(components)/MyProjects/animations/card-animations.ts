@@ -4,7 +4,7 @@ export const cardAnimation = (isInView: boolean) => ({
     opacity: isInView ? 1 : 0,
   },
   transition: {
-    duration: 0.9,
-    delay: 1,
+    duration: 1,
+    delay: 1.5,
   },
 })

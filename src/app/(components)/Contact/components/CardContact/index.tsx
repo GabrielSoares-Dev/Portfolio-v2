@@ -11,10 +11,10 @@ export default function CardContact({
   return (
     <motion.div
       animate={{
-        y: animation?.isInView ? 0 : -100,
+        y: animation?.isInView ? 0 : 100,
         opacity: animation?.isInView ? 1 : 0,
       }}
-      transition={{ duration: 1, delay: 0.3 }}
+      transition={{ duration: 0.9, delay: 1.3 }}
       className="w-full md:w-1/3 px-4 mb-10 md:mb-0 "
     >
       <div className="max-w-xs mx-auto text-center">

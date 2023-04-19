@@ -11,10 +11,10 @@ export default function Card({
   return (
     <motion.div
       animate={{
-        y: animation?.isInView ? 0 : -130,
+        y: animation?.isInView ? 0 : 130,
         opacity: animation?.isInView ? 1 : 0,
       }}
-      transition={{ duration: 1, delay: 0.3 }}
+      transition={{ duration: 0.9, delay: 1.3 }}
       className="w-full mt-5 md:w-1/2 lg:w-1/3 px-4"
     >
       <motion.div
