@@ -6,7 +6,12 @@ import Lottie from 'react-lottie'
 import options from '@/constants/developer-animation-options'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
+import type { Container, Engine } from 'tsparticles-engine'
+import { useCallback } from 'react'
 import {
+  particlesAnimation,
   descriptionAnimation,
   nameAnimation,
   roleAnimation,
@@ -17,7 +22,14 @@ import {
 
 export default function Introduction() {
   const { ref } = useIntroduction()
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine)
+  }, [])
 
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {},
+    [],
+  )
   return (
     <div className=" h-screen pb-6 sm:pb-8 lg:pb-12">
       <div className="mx-auto px-4 md:px-8">
@@ -93,6 +105,14 @@ export default function Introduction() {
           >
             <Lottie options={options} isClickToPauseDisabled />
           </motion.div>
+          <div className="absolute -z-[1] top-0 left-0  h-screen">
+            <Particles
+              id="tsparticles"
+              init={particlesInit}
+              loaded={particlesLoaded}
+              options={particlesAnimation as any}
+            />
+          </div>
         </section>
       </div>
     </div>

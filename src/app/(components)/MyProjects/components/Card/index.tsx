@@ -20,7 +20,7 @@ export function CardProject({
         initial={cardAnimation(animation?.isInView!).initial}
         className="w-full md:w-1/2 px-4 mb-8"
       >
-        <div>
+        <div className="w-auto">
           <Image
             className="rounded-lg"
             width={500}
@@ -28,14 +28,15 @@ export function CardProject({
             src={image}
             alt=""
           />
+
+          <p className="inline-block mb-4 mt-5 text-2xl text-white leading-tight text-coolGray-800  font-bold">
+            {title}
+          </p>
+          <p className="mb-4 w-full lg:w-[500px] text-base md:text-lg text-gray-500 font-medium">
+            {description}
+          </p>
         </div>
 
-        <p className="inline-block mb-4 mt-5 text-2xl text-white leading-tight text-coolGray-800  font-bold">
-          {title}
-        </p>
-        <p className="mb-4 text-base md:text-lg text-gray-500 font-medium">
-          {description}
-        </p>
         <div className="w-full md:w-32">
           <Button
             label="Ver Código"

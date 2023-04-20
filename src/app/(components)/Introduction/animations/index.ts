@@ -8,3 +8,4 @@ export {
   buttonContactAnimation,
 } from './button-animations'
 export { lottieAnimation } from './lottie-animation'
+export { particlesAnimation } from './particles-animation'

@@ -1,3 +1,4 @@
+'use client'
 import Badge from '@components/Badge'
 import CardsFrotend from './objects/cards-frotend'
 import CardsBackend from './objects/cards-backend'
