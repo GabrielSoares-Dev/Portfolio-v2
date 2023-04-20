@@ -33,13 +33,6 @@ export const particlesAnimation = {
       value: '#08d665',
     },
 
-    // links: {
-    //   color: '#08d665',
-    //   distance: 150,
-    //   enable: true,
-    //   opacity: 0.5,
-    //   width: 1,
-    // },
     collisions: {
       enable: true,
     },
