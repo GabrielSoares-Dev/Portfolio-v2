@@ -11,7 +11,7 @@ type FiltersProps = {
 export function Filters({ isInView }: FiltersProps) {
   const { isAll, isLaravel, isNodejs, handleSelected } = useFilters()
   return (
-    <ul className="flex flex-wrap mb-8 -mx-2 text-center">
+    <ul className="flex justify-center flex-wrap mb-8 -mx-2 text-center">
       <motion.li
         animate={filterAnimation(isInView).animate}
         transition={filterAnimation(isInView).transition}
