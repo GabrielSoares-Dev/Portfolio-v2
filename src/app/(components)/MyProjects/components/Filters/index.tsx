@@ -15,7 +15,7 @@ export function Filters({ isInView }: FiltersProps) {
       <motion.li
         animate={filterAnimation(isInView).animate}
         transition={filterAnimation(isInView).transition}
-        className="w-32  px-2"
+        className="w-full mt-3 px-2 md:w-32 md:mt-0"
       >
         <Button
           label="Todos"
@@ -26,7 +26,7 @@ export function Filters({ isInView }: FiltersProps) {
       <motion.li
         animate={filterAnimation(isInView).animate}
         transition={filterAnimation(isInView).transition}
-        className="w-32 px-2"
+        className="w-full px-2  mt-3 md:w-32 md:mt-0"
       >
         <Button
           onClick={() => handleSelected('LARAVEL')}
@@ -37,7 +37,7 @@ export function Filters({ isInView }: FiltersProps) {
       <motion.li
         animate={filterAnimation(isInView).animate}
         transition={filterAnimation(isInView).transition}
-        className="w-32 px-2"
+        className="w-full  mt-3 px-2 md:w-32 md:mt-0"
       >
         <Button
           label="NodeJS"

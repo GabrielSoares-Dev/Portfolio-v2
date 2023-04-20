@@ -1,19 +1,19 @@
 'use client'
-import { useState } from 'react'
 import { Filters } from '@app/(components)/MyProjects/types'
+import { useFiltersStore } from '@/store/modules'
 
 export function useFilters() {
-  const [selected, setSelected] = useState<Filters>('ALL')
-  const isAll = selected === 'ALL'
-  const isLaravel = selected === 'LARAVEL'
-  const isNodejs = selected === 'NODEJS'
+  const { filter, setFilter } = useFiltersStore()
+  const isAll = filter === 'ALL'
+  const isLaravel = filter === 'LARAVEL'
+  const isNodejs = filter === 'NODEJS'
 
   const handleSelected = (value: Filters) => {
-    setSelected(value)
+    setFilter(value)
   }
 
   return {
-    selected,
+    filter,
     isAll,
     isLaravel,
     isNodejs,
