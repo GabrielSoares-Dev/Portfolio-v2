@@ -10,7 +10,7 @@ import {
 } from '@app/(components)/MyProjects/animations'
 import { motion } from 'framer-motion'
 export function Content() {
-  const { isInView, ref } = useProjects()
+  const { isInView, ref, hasFilter, projectFiltered } = useProjects()
   return (
     <div ref={ref} className="container px-4 mx-auto">
       <div className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
@@ -40,17 +40,37 @@ export function Content() {
       </div>
       <Filters isInView={isInView} />
       <div className="flex flex-wrap -mx-4 mb-12 md:mb-20">
-        {projects.map((element) => (
-          <CardProject
-            animation={{
-              isInView,
-            }}
-            key={element.id}
-            title={element.title}
-            description={element.description}
-            image={element.image}
-          />
-        ))}
+        <>
+          {hasFilter ? (
+            projectFiltered.map((element) => (
+              <CardProject
+                animation={{
+                  isInView,
+                }}
+                url={element.url}
+                key={element.id}
+                title={element.title}
+                description={element.description}
+                image={element.image}
+              />
+            ))
+          ) : (
+            <>
+              {projects.map((element) => (
+                <CardProject
+                  animation={{
+                    isInView,
+                  }}
+                  key={element.id}
+                  url={element.url}
+                  title={element.title}
+                  description={element.description}
+                  image={element.image}
+                />
+              ))}
+            </>
+          )}
+        </>
       </div>
     </div>
   )
