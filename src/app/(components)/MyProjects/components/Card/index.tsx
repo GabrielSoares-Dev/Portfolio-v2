@@ -36,7 +36,7 @@ export function CardProject({
         <p className="mb-4 text-base md:text-lg text-gray-500 font-medium">
           {description}
         </p>
-        <div className="w-32">
+        <div className="w-full md:w-32">
           <Button
             label="Ver Código"
             onClick={() => window.open(url)}
