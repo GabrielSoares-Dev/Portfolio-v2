@@ -7,9 +7,6 @@ import options from '@/constants/developer-animation-options'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
 import Particles from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
-import type { Container, Engine } from 'tsparticles-engine'
-import { useCallback } from 'react'
 import {
   particlesAnimation,
   descriptionAnimation,
@@ -21,15 +18,8 @@ import {
 } from './animations'
 
 export default function Introduction() {
-  const { ref } = useIntroduction()
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
-  }, [])
+  const { ref, particlesInit, particlesLoaded } = useIntroduction()
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {},
-    [],
-  )
   return (
     <div className=" h-screen pb-6 sm:pb-8 lg:pb-12">
       <div className="mx-auto px-4 md:px-8">
