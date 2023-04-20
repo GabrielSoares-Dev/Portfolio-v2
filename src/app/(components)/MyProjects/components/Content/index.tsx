@@ -39,7 +39,7 @@ export function Content() {
         </motion.p>
       </div>
       <Filters isInView={isInView} />
-      <div className="flex flex-wrap -mx-4 mb-12 md:mb-20">
+      <div className="flex items-center flex-wrap mx-4 mb-12 md:mb-20">
         <>
           {hasFilter ? (
             projectFiltered.map((element) => (

@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import { CardSkillProps } from './types'
 
 export default function Card({ Icon }: CardSkillProps) {
