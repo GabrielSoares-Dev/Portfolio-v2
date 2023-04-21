@@ -1,7 +1,8 @@
 import { IconType } from 'react-icons'
+import { AnimationControls } from 'framer-motion'
 
 type animation = {
-  isInView?: boolean
+  controls: AnimationControls
 }
 export type CardServicesProps = {
   title: string

@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { NavLinkProps } from './types'
 
 export default function NavLink({
-  href,
   label,
   children,
   isActive,
@@ -10,13 +8,9 @@ export default function NavLink({
 }: NavLinkProps) {
   return (
     <div>
-      <Link
-        className={`nav-link  ${isActive && 'nav-link-active'}`}
-        href={href}
-        {...rest}
-      >
+      <a className={`nav-link  ${isActive ? 'nav-link-active' : ''}`} {...rest}>
         {label}
-      </Link>
+      </a>
       {children}
     </div>
   )

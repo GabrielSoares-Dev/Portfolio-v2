@@ -1,5 +1,6 @@
+import { AnimationControls } from 'framer-motion'
 type animation = {
-  isInView: boolean
+  controls: AnimationControls
 }
 
 export type CardProjectProps = {

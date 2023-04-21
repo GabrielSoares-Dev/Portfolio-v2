@@ -1,31 +1,31 @@
-export const badgeAnimation = (isInView: boolean) => ({
+export const badgeAnimation = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
   animate: {
-    y: isInView ? 0 : -100,
-    opacity: isInView ? 1 : 0,
+    y: 0,
+    opacity: 1,
   },
-  transition: {
-    duration: 1,
-    delay: 1.2,
-  },
-})
+}
 
-export const titleAnimation = (isInView: boolean) => ({
+export const titleAnimation = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
   animate: {
-    y: isInView ? 0 : -100,
-    opacity: isInView ? 1 : 0,
+    y: 0,
+    opacity: 1,
   },
-  transition: {
-    duration: 1,
-    delay: 0.9,
+}
+export const descriptionAnimation = {
+  initial: {
+    y: -100,
+    opacity: 0,
   },
-})
-export const descriptionAnimation = (isInView: boolean) => ({
   animate: {
-    y: isInView ? 0 : -100,
-    opacity: isInView ? 1 : 0,
+    y: 0,
+    opacity: 1,
   },
-  transition: {
-    duration: 1,
-    delay: 0.6,
-  },
-})
+}
