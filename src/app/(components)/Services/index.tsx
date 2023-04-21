@@ -11,29 +11,44 @@ import {
 } from './animations'
 
 export default function Services() {
-  const { ref, isInView } = useServices()
+  const { ref, controls } = useServices()
 
   return (
-    <section className="py-24 md:pb-32 bg-black">
-      <div ref={ref} className="container px-4 mx-auto">
+    <section id="services" ref={ref} className="py-24 md:pb-32  bg-black">
+      <div className="container px-4 mx-auto">
         <div className="md:max-w-4xl mb-12 mx-auto text-center">
           <motion.div
-            animate={badgeAnimation(isInView).animate}
-            transition={badgeAnimation(isInView).transition}
+            initial="initial"
+            variants={badgeAnimation}
+            animate={controls}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+            }}
           >
             <Badge content="SERVIÇOS" />
           </motion.div>
 
           <motion.h1
-            animate={titleAnimation(isInView).animate}
-            transition={titleAnimation(isInView).transition}
+            initial="initial"
+            animate={controls}
+            variants={titleAnimation}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+            }}
             className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter"
           >
             Transformando ideias em realidade através da tecnologia
           </motion.h1>
           <motion.div
-            animate={descriptionAnimation(isInView).animate}
-            transition={descriptionAnimation(isInView).transition}
+            initial="initial"
+            variants={descriptionAnimation}
+            animate={controls}
+            transition={{
+              duration: 1,
+              delay: 0.1,
+            }}
             className="text-gray-500 text-lg md:text-xl font-medium"
           >
             Ofereço serviços de desenvolvimento de software personalizado,
@@ -46,7 +61,7 @@ export default function Services() {
           {Cards.map((element) => (
             <Card
               animation={{
-                isInView,
+                controls,
               }}
               key={element.id}
               title={element.title}

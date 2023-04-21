@@ -1,3 +1,4 @@
+import { AnimationControls } from 'framer-motion'
 type where = {
   nameCompany: string
   district: string
@@ -6,7 +7,7 @@ type where = {
 }
 
 type animation = {
-  isInView: boolean
+  controls: AnimationControls
 }
 export type CardExperienceProps = {
   position: string

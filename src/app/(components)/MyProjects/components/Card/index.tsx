@@ -15,9 +15,13 @@ export function CardProject({
   return (
     <AnimatePresence>
       <motion.div
-        animate={cardAnimation(animation?.isInView!).animate}
-        transition={cardAnimation(animation?.isInView!).transition}
-        initial={cardAnimation(animation?.isInView!).initial}
+        initial="initial"
+        variants={cardAnimation}
+        animate={animation?.controls}
+        transition={{
+          duration: 0.5,
+          delay: 0.1,
+        }}
         className="w-full md:w-1/2 px-4 mb-8"
       >
         <div className="w-auto">

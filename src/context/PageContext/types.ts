@@ -1,6 +1,12 @@
 import { ReactNode, Dispatch, SetStateAction } from 'react'
 
-export type currentPageType = 'INTRODUCTION' | 'ABOUT' | 'CONTACT' | 'SERVICES'
+export type currentPageType =
+  | 'INTRODUCTION'
+  | 'ABOUT'
+  | 'CONTACT'
+  | 'SERVICES'
+  | 'PROJECTS'
+  | 'CAREER'
 
 export type PageContextProps = {
   currentPage: currentPageType

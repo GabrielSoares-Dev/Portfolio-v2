@@ -21,7 +21,11 @@ export default function Introduction() {
   const { ref, particlesInit, particlesLoaded } = useIntroduction()
 
   return (
-    <div className=" h-screen pb-6 sm:pb-8 lg:pb-12">
+    <div
+      ref={ref}
+      id="introduction"
+      className="h-screen mt-20 pb-6 sm:pb-8 lg:pb-12"
+    >
       <div className="mx-auto px-4 md:px-8">
         <section className="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
           <div className="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24">

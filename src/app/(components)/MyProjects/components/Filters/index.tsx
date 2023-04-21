@@ -2,19 +2,24 @@
 import Button from '@/components/Button'
 import { useFilters } from '@app/(components)/MyProjects/hooks'
 import { filterAnimation } from '@app/(components)/MyProjects/animations'
-import { motion } from 'framer-motion'
+import { motion, AnimationControls } from 'framer-motion'
 
 type FiltersProps = {
-  isInView: boolean
+  controls: AnimationControls
 }
 
-export function Filters({ isInView }: FiltersProps) {
-  const { isAll, isLaravel, isNodejs, handleSelected } = useFilters()
+export function Filters({ controls }: FiltersProps) {
+  const { isAll, isLaravel, isNodejs, handleSelected } = useFilters(controls)
   return (
     <ul className="flex justify-center flex-wrap mb-8 -mx-2 text-center">
       <motion.li
-        animate={filterAnimation(isInView).animate}
-        transition={filterAnimation(isInView).transition}
+        initial="initial"
+        variants={filterAnimation}
+        animate={controls}
+        transition={{
+          duration: 1,
+          delay: 0.1,
+        }}
         className="w-full mt-3 px-2 md:w-32 md:mt-0"
       >
         <Button
@@ -24,8 +29,13 @@ export function Filters({ isInView }: FiltersProps) {
         />
       </motion.li>
       <motion.li
-        animate={filterAnimation(isInView).animate}
-        transition={filterAnimation(isInView).transition}
+        initial="initial"
+        variants={filterAnimation}
+        animate={controls}
+        transition={{
+          duration: 1,
+          delay: 0.1,
+        }}
         className="w-full px-2  mt-3 md:w-32 md:mt-0"
       >
         <Button
@@ -35,8 +45,13 @@ export function Filters({ isInView }: FiltersProps) {
         />
       </motion.li>
       <motion.li
-        animate={filterAnimation(isInView).animate}
-        transition={filterAnimation(isInView).transition}
+        initial="initial"
+        variants={filterAnimation}
+        animate={controls}
+        transition={{
+          duration: 1,
+          delay: 0.1,
+        }}
         className="w-full  mt-3 px-2 md:w-32 md:mt-0"
       >
         <Button

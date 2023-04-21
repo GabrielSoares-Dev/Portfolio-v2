@@ -1,14 +1,10 @@
-export const cardAnimation = (isInView: boolean) => ({
+export const cardAnimation = {
   initial: {
-    y: 0,
+    y: 100,
     opacity: 0,
   },
   animate: {
-    y: isInView ? 0 : 100,
-    opacity: isInView ? 1 : 0,
+    y: 0,
+    opacity: 1,
   },
-  transition: {
-    duration: 0.5,
-    delay: 0.3,
-  },
-})
+}

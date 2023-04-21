@@ -9,22 +9,32 @@ import {
 } from './animations'
 
 export default function CallToChat() {
-  const { isInView, ref } = useCallToChat()
+  const { controls, ref } = useCallToChat()
   return (
     <section ref={ref} className="py-20 md:py-28 bg-black">
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            animate={titleAnimation(isInView).animate}
-            transition={titleAnimation(isInView).transition}
+            initial="initial"
+            variants={titleAnimation}
+            animate={controls}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+            }}
             className="mb-4 text-white text-3xl md:text-4xl font-heading font-bold"
             contentEditable={false}
           >
             Converse comigo agora mesmo
           </motion.h2>
           <motion.p
-            animate={descriptionAnimation(isInView).animate}
-            transition={descriptionAnimation(isInView).transition}
+            initial="initial"
+            variants={descriptionAnimation}
+            animate={controls}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+            }}
             className="mb-6 text-gray-500 text-lg md:text-xl font-heading font-medium text-coolGray-500"
           >
             Estou disponível para conversar com você em tempo real através de um
@@ -34,8 +44,13 @@ export default function CallToChat() {
           </motion.p>
           <div className="flex justify-center">
             <motion.div
-              animate={buttonAnimation(isInView).animate}
-              transition={buttonAnimation(isInView).transition}
+              initial="initial"
+              variants={buttonAnimation}
+              animate={controls}
+              transition={{
+                duration: 0.1,
+                delay: 1,
+              }}
               className="w-full sm:w-32"
             >
               <Button label="Iniciar chat" variant="secondary" />
