@@ -10,27 +10,42 @@ import {
 } from '@app/(components)/MyProjects/animations'
 import { motion } from 'framer-motion'
 export function Content() {
-  const { isInView, ref, hasFilter, projectFiltered } = useProjects()
+  const { ref, hasFilter, projectFiltered, controls } = useProjects()
   return (
-    <div ref={ref} className="container px-4 mx-auto">
-      <div className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
+    <div className="container px-4 mx-auto">
+      <div ref={ref} className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
         <motion.div
-          animate={badgeAnimation(isInView).animate}
-          transition={badgeAnimation(isInView).transition}
+          initial="initial"
+          variants={badgeAnimation}
+          animate={controls}
+          transition={{
+            duration: 1,
+            delay: 0.6,
+          }}
         >
           <Badge content="PROJETOS" />
         </motion.div>
 
         <motion.h3
-          animate={titleAnimation(isInView).animate}
-          transition={titleAnimation(isInView).transition}
+          initial="initial"
+          variants={titleAnimation}
+          animate={controls}
+          transition={{
+            duration: 1,
+            delay: 0.3,
+          }}
           className="mb-4 text-white text-3xl md:text-5xl leading-tight font-bold tracking-tighter"
         >
           Meus Projetos em Destaque
         </motion.h3>
         <motion.p
-          animate={descriptionAnimation(isInView).animate}
-          transition={descriptionAnimation(isInView).transition}
+          initial="initial"
+          variants={descriptionAnimation}
+          animate={controls}
+          transition={{
+            duration: 1,
+            delay: 0.1,
+          }}
           className="mb-10 text-gray-500 text-lg md:text-xl font-medium"
         >
           Confira meus projetos em desenvolvimento web e tecnologia. Apresento
@@ -38,14 +53,14 @@ export function Content() {
           para atender aos objetivos dos clientes.
         </motion.p>
       </div>
-      <Filters isInView={isInView} />
+      <Filters controls={controls} />
       <div className="flex items-center flex-wrap mx-4 mb-12 md:mb-20">
         <>
           {hasFilter ? (
             projectFiltered.map((element) => (
               <CardProject
                 animation={{
-                  isInView,
+                  controls,
                 }}
                 url={element.url}
                 key={element.id}
@@ -59,7 +74,7 @@ export function Content() {
               {projects.map((element) => (
                 <CardProject
                   animation={{
-                    isInView,
+                    controls,
                   }}
                   key={element.id}
                   url={element.url}

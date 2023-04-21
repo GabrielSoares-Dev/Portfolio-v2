@@ -1,6 +1,5 @@
-import { LinkProps } from 'next/link'
-import { ReactNode } from 'react'
-export interface NavLinkProps extends LinkProps {
+import { LinkHTMLAttributes, ReactNode } from 'react'
+export interface NavLinkProps extends LinkHTMLAttributes<HTMLAnchorElement> {
   children?: ReactNode
   label: string
   isActive: boolean

@@ -1,5 +1,6 @@
 import { CardContactProps } from './types'
 import { motion } from 'framer-motion'
+import { cardAnimation } from '@app/(components)/Contact/animations'
 
 export default function CardContact({
   text,
@@ -10,11 +11,10 @@ export default function CardContact({
 }: CardContactProps) {
   return (
     <motion.div
-      animate={{
-        y: animation?.isInView ? 0 : 100,
-        opacity: animation?.isInView ? 1 : 0,
-      }}
-      transition={{ duration: 0.9, delay: 1.3 }}
+      initial="initial"
+      variants={cardAnimation}
+      animate={animation?.controls}
+      transition={{ duration: 0.9, delay: 0.1 }}
       className="w-full md:w-1/3 px-4 mb-10 md:mb-0 "
     >
       <div className="max-w-xs mx-auto text-center">

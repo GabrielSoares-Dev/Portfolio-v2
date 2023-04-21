@@ -1,6 +1,7 @@
 'use client'
 import type { CardServicesProps } from './types'
 import { motion } from 'framer-motion'
+import { cardAnimation } from '@app/(components)/Services/animations'
 
 export default function Card({
   Icon,
@@ -10,11 +11,10 @@ export default function Card({
 }: CardServicesProps) {
   return (
     <motion.div
-      animate={{
-        y: animation?.isInView ? 0 : 130,
-        opacity: animation?.isInView ? 1 : 0,
-      }}
-      transition={{ duration: 0.9, delay: 1.3 }}
+      initial="initial"
+      variants={cardAnimation}
+      animate={animation?.controls}
+      transition={{ duration: 0.9, delay: 0.4 }}
       className="w-full mt-5 md:w-1/2 lg:w-1/3 px-4"
     >
       <motion.div

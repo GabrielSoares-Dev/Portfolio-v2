@@ -1,10 +1,10 @@
-export const buttonAnimation = (isInView: boolean) => ({
+export const buttonAnimation = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
   animate: {
-    y: isInView ? 0 : 100,
-    opacity: isInView ? 1 : 0,
+    y: 0,
+    opacity: 1,
   },
-  transition: {
-    duration: 0.9,
-    delay: 1,
-  },
-})
+}
