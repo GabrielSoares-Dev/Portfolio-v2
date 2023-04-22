@@ -59,13 +59,21 @@
     }
   
 
-    .nav-link{
-       @apply text-white text-lg font-semibold uppercase tracking-wide;
-       @apply hover:text-primary hover:transition hover:duration-700;
+    .nav-link-web{
+       @apply text-white text-lg  font-semibold uppercase tracking-wide;
+       @apply hover:text-primary  hover:transition hover:duration-700 ;
     }
-    .nav-link-active{
+    .nav-link-web-active{
       @apply  text-primary  font-semibold uppercase;
     }
+
+    .nav-link-mobile {
+      @apply block py-3 px-8 text-white hover:text-primary font-medium hover:border-2 border-primary rounded-full hover:transition-all hover:duration-700 ;
+    }
+    .nav-link-mobile-active {
+      @apply  text-primary border-2 border-primary rounded-full;
+    }
+    
     .badge {
     @apply inline-block py-px px-2 mb-4 text-xs leading-5 text-primary border-2 border-primary bg-black font-medium uppercase rounded-full shadow-sm;
     }

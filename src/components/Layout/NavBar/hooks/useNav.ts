@@ -1,9 +1,11 @@
 'use client'
+import { useState } from 'react'
 import { currentPageType } from '@/context/PageContext/types'
 import usePage from '@/hooks/usePage/usePage'
 
 export default function useNav() {
   const { currentPage, setCurrentPage } = usePage()
+  const [openNav, setOpenNav] = useState(false)
 
   const isIntroduction = currentPage === 'INTRODUCTION'
   const isAbout = currentPage === 'ABOUT'
@@ -14,6 +16,14 @@ export default function useNav() {
 
   const handleChangeSection = (section: currentPageType) =>
     setCurrentPage(section)
+
+  const handleOpenNav = (isOpen: boolean) => setOpenNav(isOpen)
+
+  const handleNavigateMobile = (section: currentPageType) => {
+    handleOpenNav(false)
+    setCurrentPage(section)
+  }
+
   return {
     isAbout,
     isIntroduction,
@@ -21,6 +31,9 @@ export default function useNav() {
     isProjects,
     isCareer,
     isContact,
+    openNav,
+    handleOpenNav,
     handleChangeSection,
+    handleNavigateMobile,
   }
 }

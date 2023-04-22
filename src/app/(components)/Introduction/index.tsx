@@ -72,22 +72,24 @@ export default function Introduction() {
               profissão, é um estilo de vida.
             </motion.p>
             <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-              <motion.div
+              <motion.a
+                href="#projects"
                 initial={buttonMyWorkAnimation.initial}
                 animate={buttonMyWorkAnimation.animate}
                 transition={buttonMyWorkAnimation.transition}
                 className="w-full sm:w-28"
               >
                 <Button label="Meu trabalho" variant="primary" />
-              </motion.div>
-              <motion.div
+              </motion.a>
+              <motion.a
+                href="#contact"
                 initial={buttonContactAnimation.initial}
                 animate={buttonContactAnimation.animate}
                 transition={buttonContactAnimation.transition}
                 className="w-full sm:w-28"
               >
                 <Button label="Contate-me" variant="secondary" />
-              </motion.div>
+              </motion.a>
             </div>
           </div>
 
