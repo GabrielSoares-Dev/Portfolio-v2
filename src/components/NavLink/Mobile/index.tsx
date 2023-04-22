@@ -1,6 +1,6 @@
 import { NavLinkProps } from './types'
 
-export default function NavLink({
+export function NavLinkMobile({
   label,
   children,
   isActive,
@@ -8,7 +8,12 @@ export default function NavLink({
 }: NavLinkProps) {
   return (
     <div>
-      <a className={`nav-link  ${isActive ? 'nav-link-active' : ''}`} {...rest}>
+      <a
+        className={`nav-link-mobile  ${
+          isActive ? 'nav-link-mobile-active' : ''
+        }`}
+        {...rest}
+      >
         {label}
       </a>
       {children}
