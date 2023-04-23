@@ -13,6 +13,7 @@ export function Mobile() {
     isIntroduction,
     isProjects,
     isServices,
+    isSkills,
     handleOpenNav,
     handleNavigateMobile,
   } = useNav()
@@ -85,6 +86,14 @@ export function Mobile() {
                     </div>
                     <div className="mt-2">
                       <NavLinkMobile
+                        href="#skills"
+                        onClick={() => handleNavigateMobile('SKILLS')}
+                        isActive={isSkills}
+                        label="HABILIDADES"
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <NavLinkMobile
                         href="#career"
                         onClick={() => handleNavigateMobile('CAREER')}
                         isActive={isCareer}
@@ -104,8 +113,7 @@ export function Mobile() {
               </nav>
               <a
                 onClick={() => handleOpenNav(false)}
-                className="navbar-close absolute top-3 p-4 right-3 hover:scale-110 hover:transition hover:duration-700"
-                href="#"
+                className=" absolute top-3 p-4 right-3 hover:scale-110 hover:transition hover:duration-700"
               >
                 <IoMdClose fontSize={25} className="fill-primary" />
               </a>
