@@ -7,6 +7,7 @@ export type currentPageType =
   | 'SERVICES'
   | 'PROJECTS'
   | 'CAREER'
+  | 'SKILLS'
 
 export type PageContextProps = {
   currentPage: currentPageType

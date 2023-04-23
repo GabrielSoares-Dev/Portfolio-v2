@@ -13,6 +13,7 @@ export default function useNav() {
   const isProjects = currentPage === 'PROJECTS'
   const isCareer = currentPage === 'CAREER'
   const isContact = currentPage === 'CONTACT'
+  const isSkills = currentPage === 'SKILLS'
 
   const handleChangeSection = (section: currentPageType) =>
     setCurrentPage(section)
@@ -31,6 +32,7 @@ export default function useNav() {
     isProjects,
     isCareer,
     isContact,
+    isSkills,
     openNav,
     handleOpenNav,
     handleChangeSection,

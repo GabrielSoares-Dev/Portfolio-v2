@@ -9,6 +9,7 @@ export function Web() {
     isProjects,
     isCareer,
     isContact,
+    isSkills,
     handleChangeSection,
   } = useNav()
   return (
@@ -41,6 +42,14 @@ export function Web() {
               isActive={isProjects}
               href="#projects"
               label="PROJETOS"
+            />
+          </div>
+          <div className="mx-3">
+            <NavLinkWeb
+              onClick={() => handleChangeSection('SKILLS')}
+              isActive={isSkills}
+              href="#skills"
+              label="HABILIDADES"
             />
           </div>
           <div className="mx-3">
