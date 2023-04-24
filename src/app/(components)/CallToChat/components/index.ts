@@ -1,0 +1,1 @@
+export { ModalPreInformationsChat } from './Modal'

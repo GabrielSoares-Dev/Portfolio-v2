@@ -7,11 +7,18 @@ import {
   descriptionAnimation,
   buttonAnimation,
 } from './animations'
+import { ModalPreInformationsChat } from './components'
+import { useState } from 'react'
 
 export default function CallToChat() {
+  const [openModal, setOpenModal] = useState(false)
   const { controls, ref } = useCallToChat()
   return (
     <section ref={ref} className="py-20 md:py-28 bg-black">
+      <ModalPreInformationsChat
+        onClose={() => setOpenModal(false)}
+        open={openModal}
+      />
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
@@ -53,7 +60,11 @@ export default function CallToChat() {
               }}
               className="w-full sm:w-32"
             >
-              <Button label="Iniciar chat" variant="secondary" />
+              <Button
+                onClick={() => setOpenModal(true)}
+                label="Iniciar chat"
+                variant="secondary"
+              />
             </motion.div>
           </div>
         </div>
