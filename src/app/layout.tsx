@@ -1,9 +1,11 @@
+'use client'
 import React from 'react'
 import '@/app/global.css'
 import Head from 'next/head'
 import NavBar from '@/components/Layout/NavBar'
-import PageContextProvider from '@/context/PageContext/PageContext'
+import { LayoutProvider } from '@/providers'
 import Footer from '@/components/Layout/Footer'
+import { useScrollStore } from '@/store/modules'
 import { Cursor } from '@/components'
 
 export const metadata = {
@@ -17,6 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { scrollDisabled } = useScrollStore()
   return (
     <html lang="pt-br">
       <Head>
@@ -27,13 +30,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body>
-        <PageContextProvider>
+      <body className={`${scrollDisabled && 'overflow-hidden'}`}>
+        <LayoutProvider>
           <NavBar />
           {children}
-        </PageContextProvider>
-        <Cursor />
-        <Footer />
+          <Cursor />
+          <Footer />
+        </LayoutProvider>
       </body>
     </html>
   )
