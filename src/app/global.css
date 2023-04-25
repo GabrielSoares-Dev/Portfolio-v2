@@ -85,12 +85,19 @@
     .input {
      @apply block w-full outline-none bg-transparent text-sm text-white font-medium;
     }
+    .input-wrapper {
+      @apply relative w-full h-14 py-4 px-3 mb-10 border border-primary  rounded-lg;
+      }
+      .input-error-message {
+        @apply text-red-600 font-medium text-base absolute top-14 left-4;
+      }
+      .input-has-error {
+        @apply border-2 border-red-600;
+      }
     .label-input {
     @apply absolute bottom-12 left-0  ml-3 -mb-1 transform translate-y-0.5 text-lg font-semibold text-white px-1 bg-black;
     }
-    .input-wrapper {
-    @apply relative w-full h-14 py-4 px-3 mb-10 border border-primary focus-within:border-green-500 rounded-lg;
-    }
+   
 
     .modal-wrapper {
     @apply max-w-xl w-full mx-auto pt-6 px-6 pb-8 bg-black border-2 border-primary rounded-xl;

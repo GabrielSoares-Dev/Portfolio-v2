@@ -1,7 +1,7 @@
 import React from 'react'
-import { Input, Modal } from '@/components'
+import { Modal } from '@/components'
 import { ModalPreInformationsProps } from '@app/(components)/CallToChat/types'
-import Button from '@/components/Button'
+import { FormPreInformations } from '@app/(components)/CallToChat/components'
 
 export function ModalPreInformationsChat({
   open,
@@ -15,23 +15,7 @@ export function ModalPreInformationsChat({
             Entre em contato comigo
           </h4>
         </div>
-        <form action="">
-          <Input label="Nome" type="text" name="name" />
-          <Input label="Email" type="email" name="email" />
-          <div className="md:flex flex-row justify-center">
-            <div className="w-full md:w-40 mr-10">
-              <Button
-                onClick={onClose}
-                variant="secondary"
-                type="button"
-                label="Fechar"
-              />
-            </div>
-            <div className="w-full mt-4 md:w-40 md:mt-0 ">
-              <Button onClick={onClose} type="button" label="Iniciar chat" />
-            </div>
-          </div>
-        </form>
+        <FormPreInformations onClose={onClose} />
       </div>
     </Modal>
   )
