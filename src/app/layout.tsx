@@ -8,7 +8,7 @@ import Footer from '@/components/Layout/Footer'
 import { useScrollStore } from '@/store/modules'
 import { Cursor } from '@/components'
 
-export const metadata = {
+const metadata = {
   title: 'Gabriel Soares Maciel',
   description:
     'Gabriel Soares Maciel, desenvolvedor full-stack com 2 anos de experiência em projetos web e mobile. Meu portfólio apresenta uma seleção dos meus melhores trabalhos, que incluem desenvolvimento de aplicativos, websites, sistemas de gerenciamento de conteúdo e outras soluções personalizadas. Com habilidades em diversas linguagens de programação e ferramentas, estou preparado para oferecer soluções eficientes e de alta qualidade para atender às necessidades de seus projetos digitais. Confira meu portfólio e entre em contato para saber mais sobre como posso ajudá-lo a alcançar seus objetivos online.',
