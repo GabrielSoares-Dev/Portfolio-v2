@@ -7,11 +7,12 @@ import {
   descriptionAnimation,
   buttonAnimation,
 } from './animations'
-import { ModalPreInformationsChat } from './components'
+import { ModalPreInformationsChat, ModalChat } from './components'
 import { useState } from 'react'
 
 export default function CallToChat() {
   const [openModal, setOpenModal] = useState(false)
+
   const { controls, ref } = useCallToChat()
   return (
     <section ref={ref} className="py-20 md:py-28 bg-black">
@@ -19,6 +20,7 @@ export default function CallToChat() {
         onClose={() => setOpenModal(false)}
         open={openModal}
       />
+      <ModalChat />
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
