@@ -9,7 +9,7 @@ import { checkIsHasError } from '@app/(components)/CallToChat/functions'
 
 export function FormPreInformations({ onClose }: FormPreInformationsProps) {
   const { handleSubmit, register, onSubmit, errors } =
-    useRegisterInformationsToChat()
+    useRegisterInformationsToChat(onClose)
 
   return (
     <form method="post" onSubmit={handleSubmit(onSubmit)}>
@@ -17,6 +17,7 @@ export function FormPreInformations({ onClose }: FormPreInformationsProps) {
         register={register}
         type="text"
         name="name"
+        autoComplete="nameComplete"
         hasError={checkIsHasError(errors.name)}
       >
         <InputLabel hasError={checkIsHasError(errors.name)}>Nome</InputLabel>
@@ -28,6 +29,7 @@ export function FormPreInformations({ onClose }: FormPreInformationsProps) {
         register={register}
         type="email"
         name="email"
+        autoComplete="emailForMe"
         hasError={checkIsHasError(errors.email)}
       >
         <InputLabel hasError={checkIsHasError(errors.email)}>Email</InputLabel>

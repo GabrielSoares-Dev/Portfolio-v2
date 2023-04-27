@@ -5,11 +5,13 @@ export default function Button({
   label,
   variant = 'primary',
   children,
+  type = 'button',
+
   ...rest
 }: ButtonProps) {
   return (
     <div>
-      <button className={transformVariant(variant)} {...rest}>
+      <button type={type} className={transformVariant(variant)} {...rest}>
         {label}
       </button>
       {children}

@@ -9,7 +9,7 @@ export function ModalPreInformationsChat({
 }: ModalPreInformationsProps) {
   return (
     <Modal onClose={onClose} open={open}>
-      <div className="relative">
+      <div className="relative py-7 px-7">
         <div className="max-w-sm mx-auto mb-10 text-center">
           <h4 className="text-2xl font-bold text-white mb-4">
             Entre em contato comigo
