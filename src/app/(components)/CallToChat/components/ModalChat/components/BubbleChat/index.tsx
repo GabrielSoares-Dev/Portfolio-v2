@@ -7,7 +7,7 @@ export function BubbleChat({
   children,
 }: BubbleChatProps) {
   return (
-    <div className="mb-6 w-full sm:w-72 ml-auto">
+    <div className="mb-6 w-64 md:w-full  ml-auto">
       <div
         className={`${
           variantBubble === 'CLIENT' ? 'bubble-client' : 'bubble-response'

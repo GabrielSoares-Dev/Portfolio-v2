@@ -100,13 +100,13 @@
    
 
     .modal-wrapper {
-    @apply max-w-xl w-max mx-auto  bg-black border-2 border-primary rounded-xl;
+    @apply max-w-xl w-max mx-auto  bg-black border-2 border-white rounded-xl;
   }
 
   .text-area-send-message-chat{
   @apply text-sm font-medium  rounded-xl resize-none outline-none;
   @apply text-white placeholder-gray-500 bg-black border-2 border-primary;
-  @apply block w-72 h-20 p-4 mb-6;
+  @apply block  w-64 md:w-72 h-20 p-4 mb-6;
 
   }
 

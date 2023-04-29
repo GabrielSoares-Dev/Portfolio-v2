@@ -8,7 +8,7 @@ export function SendButtonChat({
 }: SendButtonChatProps) {
   return (
     <div className=" flex flex-wrap items-center justify-between">
-      <div className="w-72 xl:w-28 ">
+      <div className="w-64 md:w-72 xl:w-28 ">
         <Button type={type} label={label} {...rest} />
         {children}
       </div>

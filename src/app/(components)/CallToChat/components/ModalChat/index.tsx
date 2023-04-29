@@ -45,7 +45,7 @@ export function ModalChat() {
         <ChatSendMessage>
           <InputMessageChat placeholder="Digite uma mensagem..." />
           <div className="flex flex-col-reverse xl:flex-row ">
-            <div className="w-72 mt-3 xl:w-28 xl:mr-16 xl:mt-0">
+            <div className=" w-64 md:w-72 mt-3 xl:w-28 xl:mr-16 xl:mt-0">
               <Button
                 onClick={() => setIsOpenChat(false)}
                 variant="secondary"
