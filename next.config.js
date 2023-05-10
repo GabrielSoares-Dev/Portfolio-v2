@@ -6,9 +6,7 @@ const nextConfig = {
   images: {
     domains: ['media.licdn.com'],
   },
-  experimental: {
-    appDir: true,
-  },
+
   webpack: (config, options) => {
     config.watchOptions = {
       poll: 1000,

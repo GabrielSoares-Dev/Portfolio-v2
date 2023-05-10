@@ -30,15 +30,13 @@
         @apply m-0;
         @apply p-0;
         @apply box-border;
-        @apply bg-secondary;
-  
     }
 
 
     @layer components {
      
     
-    .btn-primary {
+    .btn-primary-dark {
         @apply w-full h-10  ;
         @apply bg-primary text-white;
         @apply border-2 border-primary;         
@@ -47,8 +45,28 @@
         @apply hover:bg-black hover:text-primary hover:transition-all  hover:duration-500;
         @apply cursor-none;
     }
+    .btn-primary-white {
+        @apply w-full h-10  ;
+        @apply bg-primary text-white;
+        @apply border-2 border-primary;         
+        @apply font-semibold text-sm ;
+        @apply rounded-3xl;
+        @apply hover:bg-white hover:text-primary hover:transition-all  hover:duration-500;
+        @apply cursor-none;
+    }
 
-    .btn-secondary {
+  
+
+    .btn-secondary-white {
+        @apply w-full h-10 ;
+        @apply bg-white text-primary;
+        @apply border-2 border-primary;         
+        @apply font-semibold text-sm ;
+        @apply rounded-3xl;
+        @apply cursor-none;
+        @apply hover:bg-primary hover:text-white  hover:transition-all  hover:duration-500;
+    }
+    .btn-secondary-dark {
         @apply w-full h-10 ;
         @apply bg-black text-primary;
         @apply border-2 border-primary;         
@@ -60,7 +78,7 @@
   
 
     .nav-link-web{
-       @apply text-white text-lg  font-semibold uppercase tracking-wide;
+       @apply  text-lg  font-semibold uppercase tracking-wide;
        @apply hover:text-primary  hover:transition hover:duration-700 ;
     }
     .nav-link-web-active{
@@ -68,14 +86,14 @@
     }
 
     .nav-link-mobile {
-      @apply block py-3 px-8 text-white hover:text-primary font-medium hover:border-2 border-primary rounded-full hover:transition-all hover:duration-700 ;
+      @apply block py-3 px-8  hover:text-primary font-medium hover:border-2 border-primary rounded-full hover:transition-all hover:duration-700 ;
     }
     .nav-link-mobile-active {
       @apply  text-primary border-2 border-primary rounded-full;
     }
     
     .badge {
-    @apply inline-block py-px px-2 mb-4 text-xs leading-5 text-primary border-2 border-primary bg-black font-medium uppercase rounded-full shadow-sm;
+    @apply inline-block py-px px-2 mb-4 text-xs leading-5 text-primary border-2 border-primary font-medium uppercase rounded-full shadow-sm;
     }
 
     .backdrop{
@@ -100,22 +118,16 @@
    
 
     .modal-wrapper {
-    @apply max-w-xl w-max mx-auto  bg-black border-2 border-primary rounded-xl;
+    @apply max-w-xl w-max mx-auto  bg-black border-2 border-white rounded-xl;
   }
 
   .text-area-send-message-chat{
   @apply text-sm font-medium  rounded-xl resize-none outline-none;
   @apply text-white placeholder-gray-500 bg-black border-2 border-primary;
-  @apply block w-72 h-20 p-4 mb-6;
+  @apply block  w-64 md:w-72 h-20 p-4 mb-6;
 
   }
 
-  .bubble-client {
-  @apply py-4 pl-4 pr-8 mb-3 bg-black border-2 border-primary rounded-2xl;
-  }
 
-  .bubble-response {
-  @apply py-4 pl-4 pr-8 mb-3 bg-primary rounded-2xl;
-  }
     
     }

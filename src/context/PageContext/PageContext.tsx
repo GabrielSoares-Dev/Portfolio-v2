@@ -4,16 +4,14 @@ import type {
   PageContextProps,
   currentPageType,
   PageContextProviderProps,
-} from './types'
+} from '@context/types'
 
 export const PageContext = createContext<PageContextProps>({
   currentPage: 'INTRODUCTION',
   setCurrentPage: () => {},
 })
 
-export default function PageContextProvider({
-  children,
-}: PageContextProviderProps) {
+export function PageContextProvider({ children }: PageContextProviderProps) {
   const [currentPage, setCurrentPage] =
     useState<currentPageType>('INTRODUCTION')
 

@@ -3,9 +3,12 @@ import { useState } from 'react'
 import { CardSkillProps } from './types'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cardAnimation } from '@app/(components)/Skills/animations'
+import { useTheme } from '@/hooks'
+import { checkIsTheme } from '@/functions'
 
 export default function Card({ Icon, stack, animations }: CardSkillProps) {
   const [showText, setShowText] = useState(false)
+  const { theme } = useTheme()
 
   return (
     <div className="w-full md:w-1/2 lg:w-1/4 p-3">
@@ -17,7 +20,9 @@ export default function Card({ Icon, stack, animations }: CardSkillProps) {
           duration: 1,
           delay: 0.1,
         }}
-        className="relative flex items-center justify-center py-5 px-5 h-20 bg-black border-2 border-primary rounded-3xl"
+        className={`relative flex items-center justify-center py-5 px-5 h-20  border-2 border-primary rounded-3xl ${
+          checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+        }`}
         onMouseOver={() => setShowText(true)}
         onMouseLeave={() => setShowText(false)}
       >

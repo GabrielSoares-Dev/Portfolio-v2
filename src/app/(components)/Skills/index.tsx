@@ -5,14 +5,17 @@ import { textAnimation } from '@app/(components)/Skills/animations'
 import { useSkills } from '@app/(components)/Skills/hooks'
 import { motion } from 'framer-motion'
 import Card from './components/Card'
+import { checkIsTheme } from '@/functions'
 
 export default function Skills() {
-  const { controls, ref } = useSkills()
+  const { controls, ref, theme } = useSkills()
   return (
     <section
       id="skills"
       ref={ref}
-      className="relative pt-28 pb-36 bg-black overflow-hidden"
+      className={`relative pt-28 pb-36  overflow-hidden ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      }`}
     >
       <div className="relative z-10 container px-4 mx-auto">
         <motion.div
@@ -31,7 +34,9 @@ export default function Skills() {
               variants={textAnimation}
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
-              className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter"
+              className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
+                checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              }`}
             >
               Frontend
             </motion.h1>
@@ -56,7 +61,9 @@ export default function Skills() {
               variants={textAnimation}
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
-              className=" text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter"
+              className={`text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
+                checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              }`}
             >
               Backend
             </motion.h1>

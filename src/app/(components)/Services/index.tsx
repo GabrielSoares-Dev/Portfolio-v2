@@ -4,6 +4,7 @@ import Cards from './objects/cards'
 import { useServices } from './hooks'
 import Badge from '@/components/Badge'
 import { motion } from 'framer-motion'
+import { checkIsTheme } from '@/functions'
 import {
   badgeAnimation,
   titleAnimation,
@@ -11,10 +12,16 @@ import {
 } from './animations'
 
 export default function Services() {
-  const { ref, controls } = useServices()
+  const { ref, controls, theme } = useServices()
 
   return (
-    <section id="services" ref={ref} className="py-24 md:pb-32  bg-black">
+    <section
+      id="services"
+      ref={ref}
+      className={`py-24 md:pb-32 ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      }`}
+    >
       <div className="container px-4 mx-auto">
         <div className="md:max-w-4xl mb-12 mx-auto text-center">
           <motion.div
@@ -37,7 +44,9 @@ export default function Services() {
               duration: 1,
               delay: 0.3,
             }}
-            className="mb-4 text-white text-3xl md:text-4xl leading-tight font-bold tracking-tighter"
+            className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighter ${
+              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            }`}
           >
             Transformando ideias em realidade através da tecnologia
           </motion.h1>

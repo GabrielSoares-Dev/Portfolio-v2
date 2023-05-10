@@ -34,31 +34,16 @@ const Cards: ICards[] = [
     socials: [
       {
         id: 1,
-        link: 'https://www.facebook.com/gabriel.soaresmaciel',
-        Icon: FaFacebookF,
-      },
-      {
-        id: 2,
-        link: 'https://twitter.com/Gab_s_maciel',
-        Icon: FaTwitter,
-      },
-      {
-        id: 3,
-        link: 'https://www.instagram.com/gabriel_s.maciel/',
-        Icon: FaInstagram,
-      },
-      {
-        id: 4,
         link: 'https://www.linkedin.com/in/gabriel-soares-maciel-3690a41b4/',
         Icon: BsLinkedin,
       },
       {
-        id: 5,
+        id: 2,
         link: 'https://github.com/GabrielSoares-Dev',
         Icon: FaGithub,
       },
       {
-        id: 6,
+        id: 3,
         link: 'https://wa.me/5511942421224',
         Icon: FaWhatsapp,
       },
