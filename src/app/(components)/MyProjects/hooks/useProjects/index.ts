@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react'
 import { useInView, useAnimation } from 'framer-motion'
 import { useFiltersStore } from '@/store/modules'
 import { projects } from '@app/(components)/MyProjects/objects'
-import usePage from '@/hooks/usePage/usePage'
+import { usePage, useTheme } from '@/hooks'
 
 export function useProjects() {
   const { filter } = useFiltersStore()
@@ -12,6 +12,7 @@ export function useProjects() {
   const ref = useRef(null)
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
+  const { theme } = useTheme()
   const enabledForAnimation = isInView && animationCount === 0
   const hasFilter = filter !== 'ALL'
   const projectFiltered = projects.filter((value) =>
@@ -32,5 +33,6 @@ export function useProjects() {
     controls,
     hasFilter,
     projectFiltered,
+    theme,
   }
 }

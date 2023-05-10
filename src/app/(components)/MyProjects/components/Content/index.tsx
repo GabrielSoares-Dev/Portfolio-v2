@@ -9,8 +9,9 @@ import {
   descriptionAnimation,
 } from '@app/(components)/MyProjects/animations'
 import { motion } from 'framer-motion'
+import { checkIsTheme } from '@/functions'
 export function Content() {
-  const { ref, hasFilter, projectFiltered, controls } = useProjects()
+  const { ref, hasFilter, projectFiltered, controls, theme } = useProjects()
   return (
     <div className="container px-4 mx-auto">
       <div ref={ref} className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
@@ -34,7 +35,9 @@ export function Content() {
             duration: 1,
             delay: 0.3,
           }}
-          className="mb-4 text-white text-3xl md:text-5xl leading-tight font-bold tracking-tighter"
+          className={`mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter  ${
+            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+          }`}
         >
           Meus Projetos em Destaque
         </motion.h3>

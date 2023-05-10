@@ -4,6 +4,7 @@ import { IoMdClose } from 'react-icons/io'
 import { NavLinkMobile } from '@/components/NavLink'
 import { AnimatePresence, motion } from 'framer-motion'
 import useNav from '@/components/Layout/NavBar/hooks/useNav'
+import { checkIsTheme } from '@/functions'
 
 export function Mobile() {
   const {
@@ -14,11 +15,17 @@ export function Mobile() {
     isProjects,
     isServices,
     isSkills,
+    theme,
     handleOpenNav,
     handleNavigateMobile,
+    handleTheme,
   } = useNav()
   return (
-    <section className="block md:hidden h-20 fixed bg-black top-0 left-0 z-50 right-0">
+    <section
+      className={`block md:hidden h-20 fixed top-0 left-0 z-50 right-0 ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      }`}
+    >
       <nav className="flex justify-between p-6 px-4">
         <div className="flex justify-between items-center w-full">
           <div className="xl:w-1/3">
@@ -50,7 +57,9 @@ export function Mobile() {
                 width: 0,
               }}
               transition={{ duration: 0.5 }}
-              className="fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs bg-black"
+              className={`fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs ${
+                checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+              }`}
             >
               <nav className="relative p-6 h-full overflow-y-auto">
                 <div className="flex flex-col  h-full">
@@ -106,6 +115,15 @@ export function Mobile() {
                         onClick={() => handleNavigateMobile('CONTACT')}
                         isActive={isContact}
                         label="CONTATO"
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <NavLinkMobile
+                        onClick={() =>
+                          handleTheme(theme === 'DARK' ? 'WHITE' : 'DARK')
+                        }
+                        isActive={isContact}
+                        label="theme"
                       />
                     </div>
                   </div>

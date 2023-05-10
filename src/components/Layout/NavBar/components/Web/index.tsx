@@ -1,5 +1,6 @@
 import useNav from '@/components/Layout/NavBar/hooks/useNav'
 import { NavLinkWeb } from '@/components/NavLink'
+import { checkIsTheme } from '@/functions'
 
 export function Web() {
   const {
@@ -10,10 +11,16 @@ export function Web() {
     isCareer,
     isContact,
     isSkills,
+    theme,
     handleChangeSection,
+    handleTheme,
   } = useNav()
   return (
-    <nav className="hidden h-20 fixed top-0 left-0 z-50 right-0 bg-secondary mb-20 md:block">
+    <nav
+      className={`hidden h-20 fixed top-0 left-0 z-50 right-0  mb-20 md:block ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      }`}
+    >
       <div className="flex justify-around py-6">
         <div>
           <h1 className="text-2xl font-extrabold text-primary m-0">SOARES</h1>
@@ -34,6 +41,13 @@ export function Web() {
               isActive={isServices}
               href="#services"
               label="SERVIÇOS"
+            />
+          </div>
+          <div className="mx-3">
+            <NavLinkWeb
+              onClick={() => handleTheme(theme === 'DARK' ? 'WHITE' : 'DARK')}
+              isActive={isServices}
+              label="theme"
             />
           </div>
           <div className="mx-3">

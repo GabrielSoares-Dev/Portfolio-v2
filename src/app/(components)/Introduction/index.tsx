@@ -16,15 +16,18 @@ import {
   buttonMyWorkAnimation,
   lottieAnimation,
 } from './animations'
+import { checkIsTheme } from '@/functions'
 
 export default function Introduction() {
-  const { ref, particlesInit, particlesLoaded } = useIntroduction()
+  const { ref, theme, particlesInit, particlesLoaded } = useIntroduction()
 
   return (
     <div
       ref={ref}
       id="introduction"
-      className="h-screen mt-20 pb-6 sm:pb-8 lg:pb-12"
+      className={`h-screen ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      } mt-20 pb-6 sm:pb-8 lg:pb-12`}
     >
       <div className="mx-auto px-4 md:px-8">
         <section className="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
@@ -56,7 +59,9 @@ export default function Introduction() {
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                className="text-white mb-8 text-4xl font-bold sm:text-5xl xl:text-4xl  md:mb-12 2xl:text-[60px]"
+                className={`${
+                  checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+                } mb-8 text-4xl font-bold sm:text-5xl xl:text-4xl  md:mb-12 2xl:text-[60px]`}
               />
             </motion.div>
 

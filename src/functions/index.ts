@@ -1,0 +1,1 @@
+export { checkIsTheme } from './theme'

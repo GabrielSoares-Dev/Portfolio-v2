@@ -1,6 +1,10 @@
 import { LayoutProviderProps } from '@/providers/types'
-import PageContextProvider from '@/context/PageContext/PageContext'
+import { PageContextProvider, ThemeContextProvider } from '@/context'
 
 export function LayoutProvider({ children }: LayoutProviderProps) {
-  return <PageContextProvider>{children}</PageContextProvider>
+  return (
+    <ThemeContextProvider>
+      <PageContextProvider>{children}</PageContextProvider>
+    </ThemeContextProvider>
+  )
 }
