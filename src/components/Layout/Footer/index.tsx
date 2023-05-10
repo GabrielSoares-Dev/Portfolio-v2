@@ -1,6 +1,11 @@
+import { checkIsTheme } from '@/functions'
+import { useFooter } from './hooks'
 export default function Footer() {
+  const { theme } = useFooter()
   return (
-    <section className="bg-black">
+    <section
+      className={`${checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'}`}
+    >
       <div className="container px-4 mx-auto">
         <div className="pt-24  mx-auto max-w-4xl">
           <a className="flex justify-center md:mx-auto " href="#">
@@ -11,7 +16,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="container px-4 mx-auto">
-        <p className="py-10 md:pb-20 text-white text-lg md:text-xl text-coolGray-400 font-medium text-center">
+        <p
+          className={`py-10 md:pb-20 text-lg md:text-xl  font-medium text-center ${
+            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+          }`}
+        >
           © 2021 Gabriel S.Maciel. Todos direitos reservados.
         </p>
       </div>

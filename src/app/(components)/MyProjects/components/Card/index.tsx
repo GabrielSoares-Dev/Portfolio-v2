@@ -4,6 +4,8 @@ import Button from '@/components/Button'
 import { CardProjectProps } from '@app/(components)/MyProjects/types'
 import { cardAnimation } from '@app/(components)/MyProjects/animations'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useTheme } from '@/hooks'
+import { checkIsTheme } from '@/functions'
 
 export function CardProject({
   title,
@@ -12,6 +14,7 @@ export function CardProject({
   url,
   animation,
 }: CardProjectProps) {
+  const { theme } = useTheme()
   return (
     <AnimatePresence>
       <motion.div
@@ -33,7 +36,11 @@ export function CardProject({
             alt=""
           />
 
-          <p className="inline-block mb-4 mt-5 text-2xl text-white leading-tight text-coolGray-800  font-bold">
+          <p
+            className={`inline-block mb-4 mt-5 text-2xl  leading-tight  font-bold ${
+              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            }`}
+          >
             {title}
           </p>
           <p className="mb-4 w-full lg:w-[500px] text-base md:text-lg text-gray-500 font-medium">

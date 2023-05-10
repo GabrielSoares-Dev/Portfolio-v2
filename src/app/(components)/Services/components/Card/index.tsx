@@ -2,13 +2,15 @@
 import type { CardServicesProps } from './types'
 import { motion } from 'framer-motion'
 import { cardAnimation } from '@app/(components)/Services/animations'
-
+import { useTheme } from '@/hooks'
+import { checkIsTheme } from '@/functions'
 export default function Card({
   Icon,
   text,
   title,
   animation,
 }: CardServicesProps) {
+  const { theme } = useTheme()
   return (
     <motion.div
       initial="initial"
@@ -23,10 +25,18 @@ export default function Card({
         }}
         className="h-full p-8 text-center border-2  border-primary  rounded-md hover:shadow-xl transition duration-200"
       >
-        <div className="inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center bg-black rounded-lg">
+        <div
+          className={`inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center rounded-lg ${
+            checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+          }`}
+        >
           <Icon className="fill-primary" fontSize={30} />
         </div>
-        <h3 className="mb-4 text-xl text-white md:text-2xl leading-tight font-bold">
+        <h3
+          className={`mb-4 text-xl md:text-2xl leading-tight font-bold ${
+            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+          }`}
+        >
           {title}
         </h3>
         <p className="text-gray-500 font-medium">{text}</p>

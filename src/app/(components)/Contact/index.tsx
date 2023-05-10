@@ -9,10 +9,17 @@ import {
   descriptionAnimation,
 } from './animations'
 import Cards from './objects/cards'
+import { checkIsTheme } from '@/functions'
 export default function Contact() {
-  const { controls, ref } = useContact()
+  const { controls, ref, theme } = useContact()
   return (
-    <section id="contact" ref={ref} className="pt-20  bg-black">
+    <section
+      id="contact"
+      ref={ref}
+      className={`pt-20 ${
+        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      } `}
+    >
       <div className="container  px-4 mx-auto">
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <motion.div
@@ -35,7 +42,9 @@ export default function Contact() {
               duration: 1,
               delay: 0.6,
             }}
-            className="mb-4 text-4xl md:text-5xl leading-tight text-white font-bold tracking-tighter"
+            className={`mb-4 text-4xl md:text-5xl leading-tight  font-bold tracking-tighter ${
+              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            }`}
           >
             Entre em contato comigo
           </motion.h3>
