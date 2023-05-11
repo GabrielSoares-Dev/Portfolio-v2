@@ -5,10 +5,10 @@ import {
   SiMui,
   SiStyledcomponents,
   SiAntdesign,
+  SiNextdotjs,
+  SiReact,
 } from 'react-icons/si'
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaBootstrap } from 'react-icons/fa'
-import { TbBrandNextjs, TbBrandReactNative } from 'react-icons/tb'
-
 interface ICards extends CardSkillProps {
   id: number
 }
@@ -40,12 +40,12 @@ export const CardsFrotend: ICards[] = [
   },
   {
     id: 6,
-    Icon: TbBrandNextjs,
+    Icon: SiNextdotjs,
     stack: 'NextJS',
   },
   {
     id: 7,
-    Icon: TbBrandReactNative,
+    Icon: SiReact,
     stack: 'React Native',
   },
   {

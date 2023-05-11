@@ -10,7 +10,7 @@ export default function Badge({ content }: BadgeProps) {
   return (
     <span
       className={`badge ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       {content}

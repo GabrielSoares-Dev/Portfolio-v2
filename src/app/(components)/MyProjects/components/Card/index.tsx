@@ -38,7 +38,9 @@ export function CardProject({
 
           <p
             className={`inline-block mb-4 mt-5 text-2xl  leading-tight  font-bold ${
-              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              checkIsTheme(theme, 'DARK')
+                ? 'text-secondary-dark'
+                : 'text-secondary-white'
             }`}
           >
             {title}

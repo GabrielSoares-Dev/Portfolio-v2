@@ -10,8 +10,11 @@ module.exports = {
     extend: {
       colors: {
         primary: '#08d665',
-        secondary: '#000000',
         backdrop: 'rgba(0, 0, 0, 0.5)',
+        'secondary-dark': '#ffff',
+        'primary-dark': '#000000',
+        'secondary-white': '#000000',
+        'primary-white': '#ffff',
       },
       padding: {
         '21rem': '21rem',

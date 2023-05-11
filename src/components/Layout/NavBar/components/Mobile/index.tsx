@@ -5,6 +5,8 @@ import { NavLinkMobile } from '@/components/NavLink'
 import { AnimatePresence, motion } from 'framer-motion'
 import useNav from '@/components/Layout/NavBar/hooks/useNav'
 import { checkIsTheme } from '@/functions'
+import { MdDarkMode } from 'react-icons/md'
+import { BsFillSunFill } from 'react-icons/bs'
 
 export function Mobile() {
   const {
@@ -23,7 +25,7 @@ export function Mobile() {
   return (
     <section
       className={`block md:hidden h-20 fixed top-0 left-0 z-50 right-0 ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       <nav className="flex justify-between p-6 px-4">
@@ -58,7 +60,9 @@ export function Mobile() {
               }}
               transition={{ duration: 0.5 }}
               className={`fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs ${
-                checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+                checkIsTheme(theme, 'DARK')
+                  ? 'bg-primary-dark'
+                  : 'bg-primary-white'
               }`}
             >
               <nav className="relative p-6 h-full overflow-y-auto">
@@ -68,7 +72,27 @@ export function Mobile() {
                       SOARES
                     </h1>
                   </a>
-                  <div className="mt-20">
+                  <div className="mt-10">
+                    <div
+                      onClick={() =>
+                        handleTheme(
+                          checkIsTheme(theme, 'DARK') ? 'WHITE' : 'DARK',
+                        )
+                      }
+                      className={`w-7 mb-[30px] border-2 border-primary p-1 rounded-3xl ${
+                        checkIsTheme(theme, 'DARK')
+                          ? 'bg-primary-dark'
+                          : 'bg-primary-white'
+                      }`}
+                    >
+                      {checkIsTheme(theme, 'WHITE') && (
+                        <MdDarkMode className="fill-primary text-lg" />
+                      )}
+
+                      {checkIsTheme(theme, 'DARK') && (
+                        <BsFillSunFill className="fill-primary text-lg" />
+                      )}
+                    </div>
                     <div className="mt-2">
                       <NavLinkMobile
                         href="#introduction"
@@ -115,15 +139,6 @@ export function Mobile() {
                         onClick={() => handleNavigateMobile('CONTACT')}
                         isActive={isContact}
                         label="CONTATO"
-                      />
-                    </div>
-                    <div className="mt-2">
-                      <NavLinkMobile
-                        onClick={() =>
-                          handleTheme(theme === 'DARK' ? 'WHITE' : 'DARK')
-                        }
-                        isActive={isContact}
-                        label="theme"
                       />
                     </div>
                   </div>
