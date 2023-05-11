@@ -21,7 +21,7 @@ export default function Card({ Icon, stack, animations }: CardSkillProps) {
           delay: 0.1,
         }}
         className={`relative flex items-center justify-center py-5 px-5 h-20  border-2 border-primary rounded-3xl ${
-          checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+          checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
         }`}
         onMouseOver={() => setShowText(true)}
         onMouseLeave={() => setShowText(false)}

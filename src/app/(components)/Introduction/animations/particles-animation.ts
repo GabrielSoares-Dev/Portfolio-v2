@@ -1,10 +1,4 @@
 export const particlesAnimation = {
-  background: {
-    color: {
-      value: '#000',
-    },
-  },
-
   fpsLimit: 60,
   interactivity: {
     events: {

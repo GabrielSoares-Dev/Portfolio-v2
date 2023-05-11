@@ -8,8 +8,8 @@ export default function MyProjects() {
   return (
     <section
       id="projects"
-      className={`py-24 ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      className={`py-24 relative ${
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       } `}
     >
       <Content />

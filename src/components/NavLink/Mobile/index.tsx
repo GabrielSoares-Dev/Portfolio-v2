@@ -14,7 +14,11 @@ export function NavLinkMobile({
       <a
         className={`nav-link-mobile ${
           isActive ? 'nav-link-mobile-active' : ''
-        } ${checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'}  `}
+        } ${
+          checkIsTheme(theme, 'DARK')
+            ? 'text-secondary-dark'
+            : 'text-secondary-white'
+        }  `}
         {...rest}
       >
         {label}
