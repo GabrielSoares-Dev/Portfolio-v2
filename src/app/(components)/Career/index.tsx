@@ -12,8 +12,8 @@ export default function Career() {
   return (
     <section
       id="career"
-      className={`py-24  ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      className={` relative py-24  ${
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       <div ref={ref} className="container px-4 mx-auto">
@@ -39,7 +39,9 @@ export default function Career() {
               delay: 0.3,
             }}
             className={`mb-4 text-3xl md:text-4xl leading-tight  font-bold tracking-tighter  ${
-              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              checkIsTheme(theme, 'DARK')
+                ? 'text-secondary-dark'
+                : 'secondary-white'
             }`}
           >
             Experiência Profissional

@@ -13,7 +13,9 @@ export function NavLinkWeb({
     <div>
       <a
         className={`nav-link-web ${
-          checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+          checkIsTheme(theme, 'DARK')
+            ? 'text-secondary-dark'
+            : 'text-secondary-white'
         }  ${isActive ? 'nav-link-web-active' : ''}`}
         {...rest}
       >

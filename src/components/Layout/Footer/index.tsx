@@ -4,7 +4,9 @@ export default function Footer() {
   const { theme } = useFooter()
   return (
     <section
-      className={`${checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'}`}
+      className={`relative ${
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
+      }`}
     >
       <div className="container px-4 mx-auto">
         <div className="pt-24  mx-auto max-w-4xl">
@@ -18,7 +20,9 @@ export default function Footer() {
       <div className="container px-4 mx-auto">
         <p
           className={`py-10 md:pb-20 text-lg md:text-xl  font-medium text-center ${
-            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            checkIsTheme(theme, 'DARK')
+              ? 'text-secondary-dark'
+              : 'text-secondary-white'
           }`}
         >
           © 2021 Gabriel S.Maciel. Todos direitos reservados.

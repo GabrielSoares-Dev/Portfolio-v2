@@ -27,14 +27,16 @@ export default function Card({
       >
         <div
           className={`inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center rounded-lg ${
-            checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+            checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
           }`}
         >
           <Icon className="fill-primary" fontSize={30} />
         </div>
         <h3
           className={`mb-4 text-xl md:text-2xl leading-tight font-bold ${
-            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            checkIsTheme(theme, 'DARK')
+              ? 'text-secondary-dark'
+              : 'text-secondary-white'
           }`}
         >
           {title}

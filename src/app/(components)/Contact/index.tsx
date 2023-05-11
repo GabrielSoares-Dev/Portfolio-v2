@@ -16,8 +16,8 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className={`pt-20 ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      className={`pt-20 relative  ${
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       } `}
     >
       <div className="container  px-4 mx-auto">
@@ -43,7 +43,9 @@ export default function Contact() {
               delay: 0.6,
             }}
             className={`mb-4 text-4xl md:text-5xl leading-tight  font-bold tracking-tighter ${
-              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              checkIsTheme(theme, 'DARK')
+                ? 'text-secondary-dark'
+                : 'text-secondary-white'
             }`}
           >
             Entre em contato comigo

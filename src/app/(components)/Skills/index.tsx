@@ -14,7 +14,7 @@ export default function Skills() {
       id="skills"
       ref={ref}
       className={`relative pt-28 pb-36  overflow-hidden ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       <div className="relative z-10 container px-4 mx-auto">
@@ -35,7 +35,9 @@ export default function Skills() {
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
               className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
-                checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+                checkIsTheme(theme, 'DARK')
+                  ? 'text-secondary-dark'
+                  : 'text-secondary-white'
               }`}
             >
               Frontend
@@ -62,7 +64,9 @@ export default function Skills() {
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
               className={`text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
-                checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+                checkIsTheme(theme, 'DARK')
+                  ? 'text-secondary-dark'
+                  : 'text-secondary-white'
               }`}
             >
               Backend

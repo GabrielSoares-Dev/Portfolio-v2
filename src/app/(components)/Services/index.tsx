@@ -18,8 +18,8 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className={`py-24 md:pb-32 ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+      className={`py-24 relative md:pb-32 ${
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       <div className="container px-4 mx-auto">
@@ -45,7 +45,9 @@ export default function Services() {
               delay: 0.3,
             }}
             className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighter ${
-              checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+              checkIsTheme(theme, 'DARK')
+                ? 'text-secondary-dark'
+                : 'text-secondary-white'
             }`}
           >
             Transformando ideias em realidade através da tecnologia

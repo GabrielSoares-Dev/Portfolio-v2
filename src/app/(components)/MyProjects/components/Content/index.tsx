@@ -36,7 +36,9 @@ export function Content() {
             delay: 0.3,
           }}
           className={`mb-4 text-3xl md:text-5xl leading-tight font-bold tracking-tighter  ${
-            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            checkIsTheme(theme, 'DARK')
+              ? 'text-secondary-dark'
+              : 'text-secondary-white'
           }`}
         >
           Meus Projetos em Destaque

@@ -82,14 +82,14 @@
        @apply hover:text-primary  hover:transition hover:duration-700 ;
     }
     .nav-link-web-active{
-      @apply  text-primary  font-semibold uppercase;
+      @apply  text-primary  font-semibold uppercase !important;
     }
 
     .nav-link-mobile {
       @apply block py-3 px-8  hover:text-primary font-medium hover:border-2 border-primary rounded-full hover:transition-all hover:duration-700 ;
     }
     .nav-link-mobile-active {
-      @apply  text-primary border-2 border-primary rounded-full;
+      @apply  text-primary border-2 border-primary rounded-full  !important;
     }
     
     .badge {

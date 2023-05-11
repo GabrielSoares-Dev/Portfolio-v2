@@ -23,14 +23,16 @@ export default function CardContact({
       <div className="max-w-xs mx-auto text-center">
         <div
           className={`inline-flex mb-6 items-center justify-center w-12 h-12  border-2 border-primary rounded-full ${
-            checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+            checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
           }`}
         >
           <Icon className="fill-primary" fontSize={25} />
         </div>
         <h3
           className={`mb-2 text-2xl md:text-3xl leading-9  font-bold hover:text-primary transition duration-700 ${
-            checkIsTheme(theme, 'DARK') ? 'text-white' : 'text-black'
+            checkIsTheme(theme, 'DARK')
+              ? 'text-secondary-dark'
+              : 'text-secondary-white'
           }`}
         >
           {title}

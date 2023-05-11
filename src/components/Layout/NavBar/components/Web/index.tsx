@@ -1,6 +1,8 @@
 import useNav from '@/components/Layout/NavBar/hooks/useNav'
 import { NavLinkWeb } from '@/components/NavLink'
 import { checkIsTheme } from '@/functions'
+import { MdDarkMode } from 'react-icons/md'
+import { BsFillSunFill } from 'react-icons/bs'
 
 export function Web() {
   const {
@@ -18,7 +20,7 @@ export function Web() {
   return (
     <nav
       className={`hidden h-20 fixed top-0 left-0 z-50 right-0  mb-20 md:block ${
-        checkIsTheme(theme, 'DARK') ? 'bg-black' : 'bg-white'
+        checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
       <div className="flex justify-around py-6">
@@ -43,13 +45,7 @@ export function Web() {
               label="SERVIÇOS"
             />
           </div>
-          <div className="mx-3">
-            <NavLinkWeb
-              onClick={() => handleTheme(theme === 'DARK' ? 'WHITE' : 'DARK')}
-              isActive={isServices}
-              label="theme"
-            />
-          </div>
+
           <div className="mx-3">
             <NavLinkWeb
               onClick={() => handleChangeSection('PROJECTS')}
@@ -91,8 +87,27 @@ export function Web() {
               label="CONTATO"
             />
           </div>
+          <div
+            onClick={() =>
+              handleTheme(checkIsTheme(theme, 'DARK') ? 'WHITE' : 'DARK')
+            }
+            className={`mx-3 border-2 border-primary p-1 rounded-3xl ${
+              checkIsTheme(theme, 'DARK')
+                ? 'bg-primary-dark'
+                : 'bg-primary-white'
+            }`}
+          >
+            {checkIsTheme(theme, 'WHITE') && (
+              <MdDarkMode className="fill-primary text-lg" />
+            )}
+
+            {checkIsTheme(theme, 'DARK') && (
+              <BsFillSunFill className="fill-primary text-lg" />
+            )}
+          </div>
         </div>
       </div>
     </nav>
   )
 }
+// onClick={() => handleTheme(theme === 'DARK' ? 'WHITE' : 'DARK')}

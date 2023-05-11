@@ -1,14 +1,11 @@
 import { CardContactProps } from '../components/CardContact/types'
-import { FiPhoneCall } from 'react-icons/fi'
-import { HiOutlineMailOpen } from 'react-icons/hi'
-import { BsLinkedin, BsFillShareFill } from 'react-icons/bs'
+import { HiMail } from 'react-icons/hi'
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaGithub,
-  FaWhatsapp,
-} from 'react-icons/fa'
+  BsLinkedin,
+  BsFillShareFill,
+  BsFillTelephoneFill,
+} from 'react-icons/bs'
+import { FaGithub, FaWhatsapp } from 'react-icons/fa'
 
 interface ICards extends CardContactProps {
   id: number
@@ -18,13 +15,13 @@ const Cards: ICards[] = [
     id: 1,
     title: 'Telefone',
     text: '+55 11 94242-1224',
-    Icon: FiPhoneCall,
+    Icon: BsFillTelephoneFill,
   },
   {
     id: 2,
     title: 'Email',
     text: 'gsmaciel@outlook.com.br',
-    Icon: HiOutlineMailOpen,
+    Icon: HiMail,
   },
   {
     id: 3,
