@@ -12,7 +12,7 @@ export function NavLinkWeb({
   return (
     <div>
       <a
-        className={`nav-link-web ${
+        className={`nav-link-web transition duration-500 ${
           checkIsTheme(theme, 'DARK')
             ? 'text-secondary-dark'
             : 'text-secondary-white'

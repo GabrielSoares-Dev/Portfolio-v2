@@ -29,7 +29,7 @@ export default function CardExperience({
       >
         <div className="w-full md:w-1/2 mb-2 md:mb-0">
           <h3
-            className={`text-lg md:text-xl font-semibold ${
+            className={`text-lg md:text-xl font-semibold transition duration-500  ${
               checkIsTheme(theme, 'DARK')
                 ? 'text-secondary-dark'
                 : 'text-secondary-white'

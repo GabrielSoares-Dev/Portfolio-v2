@@ -19,7 +19,7 @@ export function Web() {
   } = useNav()
   return (
     <nav
-      className={`hidden h-20 fixed top-0 left-0 z-50 right-0  mb-20 md:block ${
+      className={`hidden h-20 fixed top-0 left-0 z-50 right-0  mb-20 md:block transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
@@ -91,18 +91,18 @@ export function Web() {
             onClick={() =>
               handleTheme(checkIsTheme(theme, 'DARK') ? 'WHITE' : 'DARK')
             }
-            className={`mx-3 border-2 border-primary p-1 rounded-3xl ${
+            className={`mx-3 border-2 border-primary p-1 rounded-3xl transition duration-500 ${
               checkIsTheme(theme, 'DARK')
                 ? 'bg-primary-dark'
                 : 'bg-primary-white'
             }`}
           >
             {checkIsTheme(theme, 'WHITE') && (
-              <MdDarkMode className="fill-primary text-lg" />
+              <MdDarkMode className="fill-primary text-lg transition duration-500" />
             )}
 
             {checkIsTheme(theme, 'DARK') && (
-              <BsFillSunFill className="fill-primary text-lg" />
+              <BsFillSunFill className="fill-primary text-lg transition duration-500" />
             )}
           </div>
         </div>

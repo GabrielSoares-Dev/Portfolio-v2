@@ -4,7 +4,7 @@ export default function Footer() {
   const { theme } = useFooter()
   return (
     <section
-      className={`relative ${
+      className={`relative transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
       <div className="container px-4 mx-auto">
         <p
-          className={`py-10 md:pb-20 text-lg md:text-xl  font-medium text-center ${
+          className={`py-10 md:pb-20 text-lg md:text-xl  font-medium text-center transition duration-500 ${
             checkIsTheme(theme, 'DARK')
               ? 'text-secondary-dark'
               : 'text-secondary-white'

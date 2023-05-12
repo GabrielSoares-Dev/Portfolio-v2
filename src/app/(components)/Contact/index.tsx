@@ -16,7 +16,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className={`pt-20 relative  ${
+      className={`pt-20 relative transition duration-500  ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       } `}
     >

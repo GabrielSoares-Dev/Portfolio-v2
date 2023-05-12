@@ -24,7 +24,7 @@ export function Mobile() {
   } = useNav()
   return (
     <section
-      className={`block md:hidden h-20 fixed top-0 left-0 z-50 right-0 ${
+      className={`block md:hidden h-20 fixed top-0 left-0 z-50 right-0 transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
@@ -59,7 +59,7 @@ export function Mobile() {
                 width: 0,
               }}
               transition={{ duration: 0.5 }}
-              className={`fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs ${
+              className={`fixed top-0 left-0 bottom-0 w-full w-4/6 max-w-xs transition duration-500 ${
                 checkIsTheme(theme, 'DARK')
                   ? 'bg-primary-dark'
                   : 'bg-primary-white'
@@ -79,18 +79,18 @@ export function Mobile() {
                           checkIsTheme(theme, 'DARK') ? 'WHITE' : 'DARK',
                         )
                       }
-                      className={`w-7 mb-[30px] border-2 border-primary p-1 rounded-3xl ${
+                      className={`w-7 mb-[30px] border-2 border-primary p-1 rounded-3xl transition duration-500 ${
                         checkIsTheme(theme, 'DARK')
                           ? 'bg-primary-dark'
                           : 'bg-primary-white'
                       }`}
                     >
                       {checkIsTheme(theme, 'WHITE') && (
-                        <MdDarkMode className="fill-primary text-lg" />
+                        <MdDarkMode className="fill-primary text-lg transition duration-500" />
                       )}
 
                       {checkIsTheme(theme, 'DARK') && (
-                        <BsFillSunFill className="fill-primary text-lg" />
+                        <BsFillSunFill className="fill-primary text-lg transition duration-500" />
                       )}
                     </div>
                     <div className="mt-2">

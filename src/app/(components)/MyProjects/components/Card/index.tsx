@@ -37,7 +37,7 @@ export function CardProject({
           />
 
           <p
-            className={`inline-block mb-4 mt-5 text-2xl  leading-tight  font-bold ${
+            className={`inline-block mb-4 mt-5 text-2xl  leading-tight  font-bold transition duration-500 ${
               checkIsTheme(theme, 'DARK')
                 ? 'text-secondary-dark'
                 : 'text-secondary-white'

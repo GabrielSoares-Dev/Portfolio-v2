@@ -12,7 +12,7 @@ export function NavLinkMobile({
   return (
     <div>
       <a
-        className={`nav-link-mobile ${
+        className={`nav-link-mobile transition duration-500 ${
           isActive ? 'nav-link-mobile-active' : ''
         } ${
           checkIsTheme(theme, 'DARK')
