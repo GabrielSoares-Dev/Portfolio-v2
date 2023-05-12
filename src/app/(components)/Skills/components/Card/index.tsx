@@ -20,7 +20,7 @@ export default function Card({ Icon, stack, animations }: CardSkillProps) {
           duration: 1,
           delay: 0.1,
         }}
-        className={`relative flex items-center justify-center py-5 px-5 h-20  border-2 border-primary rounded-3xl ${
+        className={`relative flex items-center justify-center py-5 px-5 h-20  border-2 border-primary rounded-3xl  ${
           checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
         }`}
         onMouseOver={() => setShowText(true)}

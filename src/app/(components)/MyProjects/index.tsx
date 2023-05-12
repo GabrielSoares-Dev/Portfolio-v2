@@ -8,7 +8,7 @@ export default function MyProjects() {
   return (
     <section
       id="projects"
-      className={`py-24 relative ${
+      className={`py-24 relative transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       } `}
     >

@@ -9,6 +9,7 @@ export function useIntroduction() {
   const ref = useRef(null)
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
+
   const { theme } = useTheme()
 
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -24,7 +25,7 @@ export function useIntroduction() {
     if (isInView) {
       setCurrentPage('INTRODUCTION')
     }
-  }, [isInView])
+  }, [isInView, theme])
 
   return {
     ref,
