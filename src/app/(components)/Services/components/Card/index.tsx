@@ -26,14 +26,14 @@ export default function Card({
         className="h-full p-8 text-center border-2  border-primary  rounded-md hover:shadow-xl transition duration-200"
       >
         <div
-          className={`inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center rounded-lg ${
+          className={`inline-flex h-16 w-16 mb-6 mx-auto items-center border-2 border-primary justify-center rounded-lg transition duration-500 ${
             checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
           }`}
         >
           <Icon className="fill-primary" fontSize={30} />
         </div>
         <h3
-          className={`mb-4 text-xl md:text-2xl leading-tight font-bold ${
+          className={`mb-4 text-xl md:text-2xl leading-tight font-bold transition duration-500 ${
             checkIsTheme(theme, 'DARK')
               ? 'text-secondary-dark'
               : 'text-secondary-white'

@@ -13,7 +13,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className={`relative pt-28 pb-36  overflow-hidden ${
+      className={`relative pt-28 pb-36  overflow-hidden transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
@@ -34,7 +34,7 @@ export default function Skills() {
               variants={textAnimation}
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
-              className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
+              className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighte  ${
                 checkIsTheme(theme, 'DARK')
                   ? 'text-secondary-dark'
                   : 'text-secondary-white'
@@ -63,7 +63,7 @@ export default function Skills() {
               variants={textAnimation}
               animate={controls}
               transition={{ duration: 0.9, delay: 0.3 }}
-              className={`text-3xl md:text-4xl leading-tight font-bold tracking-tighte ${
+              className={`text-3xl md:text-4xl leading-tight font-bold tracking-tighte  ${
                 checkIsTheme(theme, 'DARK')
                   ? 'text-secondary-dark'
                   : 'text-secondary-white'

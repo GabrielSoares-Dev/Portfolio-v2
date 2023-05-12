@@ -12,7 +12,7 @@ export default function Career() {
   return (
     <section
       id="career"
-      className={` relative py-24  ${
+      className={` relative py-24 transition duration-500  ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >

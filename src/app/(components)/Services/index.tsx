@@ -18,7 +18,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className={`py-24 relative md:pb-32 ${
+      className={`py-24 relative md:pb-32  transition duration-500 ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
@@ -44,7 +44,7 @@ export default function Services() {
               duration: 1,
               delay: 0.3,
             }}
-            className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighter ${
+            className={`mb-4  text-3xl md:text-4xl leading-tight font-bold tracking-tighter  ${
               checkIsTheme(theme, 'DARK')
                 ? 'text-secondary-dark'
                 : 'text-secondary-white'

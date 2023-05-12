@@ -27,7 +27,7 @@ export default function Introduction() {
       id="introduction"
       className={`h-screen ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
-      } mt-20 pb-6 sm:pb-8 lg:pb-12 `}
+      } mt-20 pb-6 sm:pb-8 lg:pb-12 transition duration-500 `}
     >
       <div className="mx-auto px-4 md:px-8">
         <section className="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
@@ -64,7 +64,7 @@ export default function Introduction() {
                   checkIsTheme(theme, 'DARK')
                     ? 'text-secondary-dark'
                     : 'text-secondary-white'
-                } text-secondary-white mb-8 text-4xl font-bold sm:text-5xl xl:text-4xl  md:mb-12 2xl:text-[60px]`}
+                }  mb-8 text-4xl font-bold sm:text-5xl xl:text-4xl   md:mb-12 2xl:text-[60px]`}
               />
             </motion.div>
 
