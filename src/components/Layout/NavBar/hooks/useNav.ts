@@ -2,11 +2,10 @@
 import { useState } from 'react'
 import { currentPageType } from '@/context/types'
 import { usePage, useTheme } from '@/hooks'
-import type { Theme } from '@/context/types'
 
 export default function useNav() {
   const { currentPage, setCurrentPage } = usePage()
-  const { setTheme, theme } = useTheme()
+  const { handleTheme, theme } = useTheme()
   const [openNav, setOpenNav] = useState(false)
 
   const isIntroduction = currentPage === 'INTRODUCTION'
@@ -22,7 +21,6 @@ export default function useNav() {
 
   const handleOpenNav = (isOpen: boolean) => setOpenNav(isOpen)
 
-  const handleTheme = (theme: Theme) => setTheme(theme)
   const handleNavigateMobile = (section: currentPageType) => {
     handleOpenNav(false)
     setCurrentPage(section)
