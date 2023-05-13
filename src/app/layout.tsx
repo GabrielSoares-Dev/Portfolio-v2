@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import '@/app/global.css'
 import Head from 'next/head'
 import NavBar from '@/components/Layout/NavBar'
@@ -7,7 +7,6 @@ import { LayoutProvider } from '@/providers'
 import Footer from '@/components/Layout/Footer'
 import { useScrollStore } from '@/store/modules'
 import { Cursor } from '@/components'
-import { useTheme } from '@/hooks'
 
 const metadata = {
   title: 'Gabriel Soares Maciel',

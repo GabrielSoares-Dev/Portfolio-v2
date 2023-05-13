@@ -15,7 +15,6 @@
     "@types/react-dom": "18.0.11",
     "@types/react-lottie": "^1.2.6",
     "autoprefixer": "^10.4.13",
-    "cookies-next": "^2.1.1",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "framer-motion": "^10.3.2",
