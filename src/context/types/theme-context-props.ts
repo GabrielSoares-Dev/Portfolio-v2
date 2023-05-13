@@ -1,9 +1,9 @@
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { ReactNode } from 'react'
 export type Theme = 'DARK' | 'WHITE'
 
 export type ThemeContextProps = {
   theme: Theme
-  setTheme: Dispatch<SetStateAction<Theme>>
+  handleTheme: (theme: Theme) => void
 }
 
 export type ThemeContextProviderProps = {
