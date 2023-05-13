@@ -7,3 +7,9 @@ services:
    ports:
     - "3000:3000"
    restart: always
+  networks:
+   - proxy-reverse-network
+networks:
+  proxy-reverse-network:
+   name: proxy-reverse-network
+   external: true
