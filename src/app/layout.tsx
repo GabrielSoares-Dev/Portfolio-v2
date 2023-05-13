@@ -19,7 +19,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { scrollDisabled } = useScrollStore()
+  const { scrollDisabled, scrollColor } = useScrollStore()
+
   return (
     <html lang="pt-br">
       <Head>
@@ -30,7 +31,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutProvider>
-        <body className={`${scrollDisabled && 'overflow-hidden'} `}>
+        <body
+          className={`${scrollDisabled && 'overflow-hidden'} ${scrollColor}`}
+        >
           <NavBar />
           {children}
           <Cursor />
