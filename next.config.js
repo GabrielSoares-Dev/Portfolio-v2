@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   swcMinify: true,
+
   images: {
     domains: ['media.licdn.com'],
   },

@@ -1,0 +1,87 @@
+{
+    "menu": {
+        "linkHome": "HOME",
+        "linkServices": "SERVICES",
+        "linkProjects": "PROJECTS",
+        "linkSkills": "SKILLS",
+        "linkCareer": "CAREER",
+        "linkContact": "CONTACT"
+    },
+    "introduction": {
+        "btnMyWork": "My work",
+        "btnContactMe": "Contact me",
+        "title": {
+            "devFullStack": "Full Stack Developer",
+            "devMobile": "Mobile Developer",
+            "devFrontend": "Frontend Developer",
+            "devBackend": "Backend Developer"
+        },
+        "description": "Developing is my passion. Turning ideas into reality is what drives me. With every code written, every problem solved, I feel closer to my purpose. It's not just a profession, it's a way of life."
+    },
+    "services": {
+        "badge": "SERVICES",
+        "title": "Turning ideas into reality through technology",
+        "description": "Ofereço serviços de desenvolvimento de software personalizado, aplicativos móveis, websites e APIs para ajudar empresas e empreendedores a atingir seus objetivos de negócios com soluções tecnológicas inovadoras.",
+        "cardWebDevelopment": {
+            "title": "Web Development",
+            "description": "Your online presence starts here - we create custom web applications to take your business to the next level."
+        },
+        "cardApiDevelopment": {
+            "title": "API Development",
+            "description": "Connect your applications, systems, and devices with ease and efficiency, with my custom API development service."
+        },
+        "cardMobileDevelopment": {
+            "title": "Mobile Development",
+            "description": "Turn your ideas into reality and reach new audiences with my service of developing intuitive and powerful mobile applications."
+        },
+        "cardCustomSoftwareDevelopment": {
+            "title": "Custom Software Development",
+            "description": "No matter the size or complexity of your business challenge - I'm here to offer customized software solutions that meet your unique needs."
+        },
+        "cardInstutionalWebSites": {
+            "title": "Instutional WebSites",
+            "description": "I design responsive and elegant institutional websites that highlight the unique identity of your brand, providing your visitors with an intuitive and engaging experience that leads them to become loyal customers."
+        },
+        "cardLandingPages": {
+            "title": "Landing Pages",
+            "description": "I offer customized Landing Page solutions to increase conversion of your visitors into customers, building an intuitive and impactful online experience that keeps your audience engaged and takes your business to the next level."
+        }
+    },
+    "projects": {
+        "badge": "PROJECTS",
+        "title": "My Featured Projects",
+        "description": "Check out my web development and technology projects. I present some of my best work, created with skill and innovation to meet clients' objectives.",
+        "cardBestJobs": {
+            "description": "BestJob is an online platform that connects freelancers with clients worldwide, offering a wide variety of job opportunities in various areas. With easy-to-use tools, users can manage projects, submit proposals, and collaborate directly with clients."
+        },
+        "cardCrudTasks": {
+            "description": "Este é um projeto de CRUD de tarefas criado com Lumen (PHP) para aprender deploy com Docker. Permite criar, ler, atualizar e deletar tarefas e marcar como concluídas ou não. Com Docker, a aplicação é facilmente instalada e executada em diferentes ambientes, tornando o deploy mais eficiente e rápido."
+        },
+        "btnCards": "View Code"
+    },
+    "skills": {
+        "badge": "SKILLS"
+    },
+    "career": {
+        "badge": "CAREER",
+        "title": "Professional Experience",
+        "cardLoginTecnologies": {
+            "position": "Junior Full Stack Developer",
+            "date": "Current"
+        }
+    },
+    "contact": {
+        "badge": "CONTACT",
+        "title": "Contact me",
+        "description": "If you're in need of a skilled developer for your next project, look no further! Contact me today and let's work together to achieve your goals. I'm looking forward to hearing from you!",
+        "cardPhoneNumber": {
+            "title": "Phone"
+        },
+        "cardSocialMedia": {
+            "title": "Social Media"
+        }
+    },
+    "footer": {
+        "text": "© 2023 Gabriel S.Maciel. All rights reserved."
+    }
+}
