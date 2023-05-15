@@ -1,0 +1,87 @@
+{
+    "menu": {
+        "linkHome": "HOME",
+        "linkServices": "SERVIÇOS",
+        "linkProjects": "PROJETOS",
+        "linkSkills": "HABILIDADES",
+        "linkCareer": "EXPERIÊNCIA",
+        "linkContact": "CONTATO"
+    },
+    "introduction": {
+        "btnMyWork": "Meu trabalho",
+        "btnContactMe": "Contate-me",
+        "title": {
+            "devFullStack": "Desenvolvedor Full Stack",
+            "devMobile": "Desenvolvedor Mobile",
+            "devFrontend": "Desenvolvedor Frontend",
+            "devBackend": "Desenvolvedor Backend"
+        },
+        "description": "Desenvolver é minha paixão. Transformar ideias em realidade é o que me move. A cada código escrito, a cada problema resolvido, sinto-me mais próximo do meu propósito. Não é apenas uma profissão, é um estilo de vida."
+    },
+    "services": {
+        "badge": "SERVIÇOS",
+        "title": "Transformando ideias em realidade através da tecnologia",
+        "description": "Ofereço serviços de desenvolvimento de software personalizado, aplicativos móveis, websites e APIs para ajudar empresas e empreendedores a atingir seus objetivos de negócios com soluções tecnológicas inovadoras.",
+        "cardWebDevelopment": {
+            "title": "Desenvolvimento Web",
+            "description": "Sua presença online começa aqui - criamos aplicativos web personalizados para levar sua empresa para o próximo nível."
+        },
+        "cardApiDevelopment": {
+            "title": "Desenvolvimento de APIs",
+            "description": "Conecte seus aplicativos, sistemas e dispositivos com facilidade e eficiência, com meu serviço de desenvolvimento de API sob medida."
+        },
+        "cardMobileDevelopment": {
+            "title": "Desenvolvimento de Apps Móveis",
+            "description": "Transforme suas ideias em realidade e alcance novos públicos com meu serviço de desenvolvimento de aplicativos móveis intuitivos e poderosos."
+        },
+        "cardCustomSoftwareDevelopment": {
+            "title": "Software Personalizado",
+            "description": "Não importa o tamanho ou a complexidade do seu desafio de negócios - estou aqui para oferecer soluções personalizadas de software que atendem às suas necessidades exclusivas."
+        },
+        "cardInstutionalWebSites": {
+            "title": "Sites Institucionais",
+            "description": "Eu projeto sites institucionais responsivos e elegantes que destacam a identidade única de sua marca, fornecendo a seus visitantes uma experiência intuitiva e cativante que os leva a converter em clientes leais."
+        },
+        "cardLandingPages": {
+            "title": "Landing Pages",
+            "description": "Ofereço soluções personalizadas de Landing Pages para aumentar a conversão de seus visitantes em clientes, construindo uma experiência online intuitiva e impactante que mantém seu público engajado e leva seu negócio para o próximo nível."
+        }
+    },
+    "projects": {
+        "badge": "PROJETOS",
+        "title": "Meus Projetos em Destaque",
+        "description": "Confira meus projetos em desenvolvimento web e tecnologia. Apresento alguns dos meus melhores trabalhos, criados com habilidade e inovação para atender aos objetivos dos clientes.",
+        "cardBestJobs": {
+            "description": "BestJob é uma plataforma online que conecta freelancers com clientes em todo o mundo, oferecendo uma ampla variedade de oportunidades de trabalho em diversas áreas. Com ferramentas fáceis de usar, os usuários podem gerenciar projetos, enviar propostas e colaborar diretamente com clientes.."
+        },
+        "cardCrudTasks": {
+            "description": "Este é um projeto de CRUD de tarefas criado com Lumen (PHP) para aprender deploy com Docker. Permite criar, ler, atualizar e deletar tarefas e marcar como concluídas ou não. Com Docker, a aplicação é facilmente instalada e executada em diferentes ambientes, tornando o deploy mais eficiente e rápido."
+        },
+        "btnCards": "Ver Código"
+    },
+    "skills": {
+        "badge": "HABILIDADES"
+    },
+    "career": {
+        "badge": "EXPERIÊNCIA",
+        "title": "Experiência Profissional",
+        "cardLoginTecnologies": {
+            "position": "Desenvolvedor Full Stack Jr",
+            "date": "Atual"
+        }
+    },
+    "contact": {
+        "badge": "CONTATO",
+        "title": "Entre em contato comigo",
+        "description": "Se você precisa de um desenvolvedor habilidoso para o seu próximo projeto, não precisa procurar mais! Entre em contato comigo hoje mesmo e vamos trabalhar juntos para alcançar seus objetivos. Estou ansioso para ouvir de você!",
+        "cardPhoneNumber": {
+            "title": "Telefone"
+        },
+        "cardSocialMedia": {
+            "title": "Redes Sociais"
+        }
+    },
+    "footer":{
+        "text":"© 2023 Gabriel S.Maciel. Todos direitos reservados."
+    }
+}
