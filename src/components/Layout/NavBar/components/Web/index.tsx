@@ -27,7 +27,7 @@ export function Web() {
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       }`}
     >
-      <div className="flex justify-around py-6">
+      <div className="flex justify-around py-6 ">
         <div>
           <h1 className="text-2xl font-extrabold text-primary m-0">SOARES</h1>
         </div>

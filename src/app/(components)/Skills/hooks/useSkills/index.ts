@@ -2,6 +2,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { useInView, useAnimation } from 'framer-motion'
 import { useLanguage, usePage, useTheme } from '@/hooks'
+import { useScrollStore } from '@/store/modules'
 
 export function useSkills() {
   const controls = useAnimation()
@@ -11,6 +12,7 @@ export function useSkills() {
   const { setCurrentPage } = usePage()
   const { currentLanguage } = useLanguage()
   const { theme } = useTheme()
+  const { setScrollToTop } = useScrollStore()
   const enabledForAnimation = isInView && animationCount === 0
 
   useEffect(() => {
@@ -20,6 +22,7 @@ export function useSkills() {
     }
     if (isInView) {
       setCurrentPage('SKILLS')
+      setScrollToTop(true)
     }
   }, [isInView, animationCount])
   return {

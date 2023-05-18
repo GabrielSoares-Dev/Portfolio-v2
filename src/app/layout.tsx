@@ -5,7 +5,7 @@ import NavBar from '@/components/Layout/NavBar'
 import { LayoutProvider } from '@/providers'
 import Footer from '@/components/Layout/Footer'
 import { useScrollStore } from '@/store/modules'
-import { Cursor } from '@/components'
+import { Cursor, ScrollToTop } from '@/components'
 import Head from 'next/head'
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const { scrollDisabled, scrollColor } = useScrollStore()
+  const { scrollDisabled, scrollColor, scrollToTop } = useScrollStore()
 
   return (
     <html lang="pt-br">
@@ -28,6 +28,7 @@ export default function RootLayout({
           {children}
           <Cursor />
           <Footer />
+          {scrollToTop && <ScrollToTop />}
         </body>
       </LayoutProvider>
     </html>
