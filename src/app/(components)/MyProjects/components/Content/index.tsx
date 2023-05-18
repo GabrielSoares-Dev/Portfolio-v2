@@ -9,9 +9,12 @@ import {
   descriptionAnimation,
 } from '@app/(components)/MyProjects/animations'
 import { motion } from 'framer-motion'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 export function Content() {
-  const { ref, hasFilter, projectFiltered, controls, theme } = useProjects()
+  const { ref, hasFilter, projectFiltered, controls, theme, currentLanguage } =
+    useProjects()
   return (
     <div className="container px-4 mx-auto">
       <div ref={ref} className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
@@ -24,7 +27,13 @@ export function Content() {
             delay: 0.6,
           }}
         >
-          <Badge content="PROJETOS" />
+          <Badge
+            content={
+              checkIsLanguage(currentLanguage, 'PT-BR')
+                ? ptBr.projects.badge
+                : en.projects.badge
+            }
+          />
         </motion.div>
 
         <motion.h3
@@ -41,7 +50,9 @@ export function Content() {
               : 'text-secondary-white'
           }`}
         >
-          Meus Projetos em Destaque
+          {checkIsLanguage(currentLanguage, 'PT-BR')
+            ? ptBr.projects.title
+            : en.projects.title}
         </motion.h3>
         <motion.p
           initial="initial"
@@ -53,9 +64,9 @@ export function Content() {
           }}
           className="mb-10 text-gray-500 text-lg md:text-xl font-medium"
         >
-          Confira meus projetos em desenvolvimento web e tecnologia. Apresento
-          alguns dos meus melhores trabalhos, criados com habilidade e inovação
-          para atender aos objetivos dos clientes.
+          {checkIsLanguage(currentLanguage, 'PT-BR')
+            ? ptBr.projects.description
+            : en.projects.description}
         </motion.p>
       </div>
       <Filters controls={controls} />
@@ -76,7 +87,7 @@ export function Content() {
             ))
           ) : (
             <>
-              {projects.map((element) => (
+              {projects(currentLanguage).map((element) => (
                 <CardProject
                   animation={{
                     controls,

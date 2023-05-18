@@ -5,10 +5,12 @@ import { textAnimation } from '@app/(components)/Skills/animations'
 import { useSkills } from '@app/(components)/Skills/hooks'
 import { motion } from 'framer-motion'
 import Card from './components/Card'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export default function Skills() {
-  const { controls, ref, theme } = useSkills()
+  const { controls, ref, theme, currentLanguage } = useSkills()
   return (
     <section
       id="skills"
@@ -25,7 +27,13 @@ export default function Skills() {
           transition={{ duration: 0.9, delay: 0.5 }}
           className="flex justify-center mb-10"
         >
-          <Badge content="HABILIDADES" />
+          <Badge
+            content={
+              checkIsLanguage(currentLanguage, 'PT-BR')
+                ? ptBr.skills.badge
+                : en.skills.badge
+            }
+          />
         </motion.div>
         <div>
           <div className="flex justify-center mb-5">

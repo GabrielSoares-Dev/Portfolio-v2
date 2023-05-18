@@ -2,7 +2,7 @@ import { ButtonProps } from './types'
 import { transformVariant } from './functions/transform-variants'
 import { useTheme } from '@/hooks'
 
-export default function Button({
+export function Button({
   label,
   variant = 'primary',
   children,

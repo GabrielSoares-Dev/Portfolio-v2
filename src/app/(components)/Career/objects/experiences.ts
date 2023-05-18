@@ -1,14 +1,17 @@
-import { CardExperienceProps } from '@app/(components)/Career/types'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
+import { checkIsLanguage } from '@/functions'
+import type { Language } from '@/context/types'
 
-type CardExperienceObject = CardExperienceProps & {
-  id: number
-}
-
-export const experiences: CardExperienceObject[] = [
+export const experiences = (currentLanguage: Language) => [
   {
     id: 1,
-    position: 'Desenvolvedor Full Stack Jr',
-    dateInPosition: 'Atual',
+    position: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.career.cardLoginTecnologies.position
+      : en.career.cardLoginTecnologies.position,
+    dateInPosition: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.career.cardLoginTecnologies.date
+      : en.career.cardLoginTecnologies.date,
     where: {
       city: 'Barueri',
       district: 'Alphaville',

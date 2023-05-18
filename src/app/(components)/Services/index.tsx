@@ -4,15 +4,17 @@ import Cards from './objects/cards'
 import { useServices } from './hooks'
 import Badge from '@/components/Badge'
 import { motion } from 'framer-motion'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
 import {
   badgeAnimation,
   titleAnimation,
   descriptionAnimation,
 } from './animations'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export default function Services() {
-  const { ref, controls, theme } = useServices()
+  const { ref, controls, theme, currentLanguage } = useServices()
 
   return (
     <section
@@ -33,7 +35,13 @@ export default function Services() {
               delay: 0.6,
             }}
           >
-            <Badge content="SERVIÇOS" />
+            <Badge
+              content={
+                checkIsLanguage(currentLanguage, 'PT-BR')
+                  ? ptBr.services.badge
+                  : en.services.badge
+              }
+            />
           </motion.div>
 
           <motion.h1
@@ -50,7 +58,9 @@ export default function Services() {
                 : 'text-secondary-white'
             }`}
           >
-            Transformando ideias em realidade através da tecnologia
+            {checkIsLanguage(currentLanguage, 'PT-BR')
+              ? ptBr.services.title
+              : en.services.title}
           </motion.h1>
           <motion.div
             initial="initial"
@@ -62,14 +72,13 @@ export default function Services() {
             }}
             className="text-gray-500 text-lg md:text-xl font-medium"
           >
-            Ofereço serviços de desenvolvimento de software personalizado,
-            aplicativos móveis, websites e APIs para ajudar empresas e
-            empreendedores a atingir seus objetivos de negócios com soluções
-            tecnológicas inovadoras.
+            {checkIsLanguage(currentLanguage, 'PT-BR')
+              ? ptBr.services.description
+              : en.services.description}
           </motion.div>
         </div>
         <div className="flex flex-wrap -mx-4">
-          {Cards.map((element) => (
+          {Cards(currentLanguage).map((element) => (
             <Card
               animation={{
                 controls,
