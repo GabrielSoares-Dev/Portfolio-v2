@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLanguage, usePage, useTheme } from '@/hooks'
 import { useAnimation, useInView } from 'framer-motion'
+import { useScrollStore } from '@/store/modules'
 
 export function useCareer() {
   const controls = useAnimation()
@@ -11,6 +12,7 @@ export function useCareer() {
   const { setCurrentPage } = usePage()
   const { theme } = useTheme()
   const { currentLanguage } = useLanguage()
+  const { setScrollToTop } = useScrollStore()
   const enabledForAnimation = isInView && animationCount === 0
 
   useEffect(() => {
@@ -20,6 +22,7 @@ export function useCareer() {
     }
     if (isInView) {
       setCurrentPage('CAREER')
+      setScrollToTop(true)
     }
   }, [isInView, animationCount])
   return {
