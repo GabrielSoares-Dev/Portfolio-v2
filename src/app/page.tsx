@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import Introduction from '@app/(components)/Introduction'
 import Services from '@app/(components)/Services'
 import Skils from '@/app/(components)/Skills'
@@ -7,6 +6,7 @@ import Career from '@/app/(components)/Career'
 import MyProjects from '@/app/(components)/MyProjects'
 import ptBr from '@public/locales/pt/home.json'
 
+// @ts-ignore
 export const metadata = {
   title: 'Gabriel | Dev Full Stack',
   icons: {

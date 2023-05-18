@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePage, useTheme, useLanguage } from '@/hooks'
 import { useInView, useAnimation } from 'framer-motion'
+import { useScrollStore } from '@/store/modules'
 
 export function useServices() {
   const controls = useAnimation()
@@ -11,6 +12,7 @@ export function useServices() {
   const { setCurrentPage } = usePage()
   const { theme } = useTheme()
   const { currentLanguage } = useLanguage()
+  const { setScrollToTop } = useScrollStore()
   const enabledForAnimation = isInView && animationCount === 0
 
   useEffect(() => {
@@ -20,6 +22,7 @@ export function useServices() {
     }
     if (isInView) {
       setCurrentPage('SERVICES')
+      setScrollToTop(true)
     }
   }, [isInView, animationCount])
 

@@ -32,8 +32,8 @@ export default function Introduction() {
 
   return (
     <div
-      ref={ref}
       id="introduction"
+      ref={ref}
       className={`h-screen ${
         checkIsTheme(theme, 'DARK') ? 'bg-primary-dark' : 'bg-primary-white'
       } mt-20 pb-6 sm:pb-8 lg:pb-12 transition duration-500 `}
