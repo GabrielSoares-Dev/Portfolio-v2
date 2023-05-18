@@ -5,10 +5,12 @@ import { experiences } from './objects'
 import { useCareer } from './hooks'
 import { motion } from 'framer-motion'
 import { badgeAnimation, titleAnimation } from './animations'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export default function Career() {
-  const { ref, controls, theme } = useCareer()
+  const { ref, controls, theme, currentLanguage } = useCareer()
   return (
     <section
       id="career"
@@ -27,7 +29,13 @@ export default function Career() {
               delay: 0.6,
             }}
           >
-            <Badge content="Experiência" />
+            <Badge
+              content={
+                checkIsLanguage(currentLanguage, 'PT-BR')
+                  ? ptBr.career.badge
+                  : en.career.badge
+              }
+            />
           </motion.div>
 
           <motion.h3
@@ -44,10 +52,12 @@ export default function Career() {
                 : 'secondary-white'
             }`}
           >
-            Experiência Profissional
+            {checkIsLanguage(currentLanguage, 'PT-BR')
+              ? ptBr.career.title
+              : en.career.title}
           </motion.h3>
         </div>
-        {experiences.map((element) => (
+        {experiences(currentLanguage).map((element) => (
           <CardExperience
             animation={{
               controls,

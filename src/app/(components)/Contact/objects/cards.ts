@@ -1,4 +1,3 @@
-import { CardContactProps } from '../components/CardContact/types'
 import { HiMail } from 'react-icons/hi'
 import {
   BsLinkedin,
@@ -6,14 +5,17 @@ import {
   BsFillTelephoneFill,
 } from 'react-icons/bs'
 import { FaGithub, FaWhatsapp } from 'react-icons/fa'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
+import { checkIsLanguage } from '@/functions'
+import type { Language } from '@/context/types'
 
-interface ICards extends CardContactProps {
-  id: number
-}
-const Cards: ICards[] = [
+const Cards = (currentLanguage: Language) => [
   {
     id: 1,
-    title: 'Telefone',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.contact.cardPhoneNumber.title
+      : en.contact.cardPhoneNumber.title,
     text: '+55 11 94242-1224',
     Icon: BsFillTelephoneFill,
   },
@@ -25,7 +27,9 @@ const Cards: ICards[] = [
   },
   {
     id: 3,
-    title: 'Redes Sociais',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.contact.cardSocialMedia.title
+      : en.contact.cardSocialMedia.title,
     text: '',
     Icon: BsFillShareFill,
     socials: [

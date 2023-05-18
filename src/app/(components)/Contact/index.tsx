@@ -9,9 +9,11 @@ import {
   descriptionAnimation,
 } from './animations'
 import Cards from './objects/cards'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 export default function Contact() {
-  const { controls, ref, theme } = useContact()
+  const { controls, ref, theme, currentLanguage } = useContact()
   return (
     <section
       id="contact"
@@ -31,7 +33,13 @@ export default function Contact() {
               delay: 0.9,
             }}
           >
-            <Badge content="CONTATO" />
+            <Badge
+              content={
+                checkIsLanguage(currentLanguage, 'PT-BR')
+                  ? ptBr.contact.badge
+                  : en.contact.badge
+              }
+            />
           </motion.div>
 
           <motion.h3
@@ -48,7 +56,9 @@ export default function Contact() {
                 : 'text-secondary-white'
             }`}
           >
-            Entre em contato comigo
+            {checkIsLanguage(currentLanguage, 'PT-BR')
+              ? ptBr.contact.title
+              : en.contact.title}
           </motion.h3>
           <motion.p
             initial="initial"
@@ -60,14 +70,13 @@ export default function Contact() {
             }}
             className="text-gray-500 text-lg md:text-xl font-medium"
           >
-            Se você precisa de um desenvolvedor habilidoso para o seu próximo
-            projeto, não precisa procurar mais! Entre em contato comigo hoje
-            mesmo e vamos trabalhar juntos para alcançar seus objetivos. Estou
-            ansioso para ouvir de você!
+            {checkIsLanguage(currentLanguage, 'PT-BR')
+              ? ptBr.contact.description
+              : en.contact.description}
           </motion.p>
         </div>
         <div className="flex flex-wrap -mx-4 pb-16">
-          {Cards.map((element) => (
+          {Cards(currentLanguage).map((element) => (
             <CardContact
               animation={{
                 controls,

@@ -2,7 +2,6 @@ import { ReactNode, Dispatch, SetStateAction } from 'react'
 
 export type currentPageType =
   | 'INTRODUCTION'
-  | 'ABOUT'
   | 'CONTACT'
   | 'SERVICES'
   | 'PROJECTS'

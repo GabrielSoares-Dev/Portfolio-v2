@@ -1,4 +1,7 @@
 {
+    "metaData": {
+        "description": "Gabriel Soares Maciel, full-stack developer with 2 years of experience in web and mobile projects. My portfolio showcases a selection of my best works, including app development, websites, content management systems, and other customized solutions. With skills in various programming languages and tools, I am prepared to provide efficient and high-quality solutions to meet the needs of your digital projects. Check out my portfolio and get in touch to learn more about how I can help you achieve your online goals."
+    },
     "menu": {
         "linkHome": "HOME",
         "linkServices": "SERVICES",
@@ -21,7 +24,7 @@
     "services": {
         "badge": "SERVICES",
         "title": "Turning ideas into reality through technology",
-        "description": "Ofereço serviços de desenvolvimento de software personalizado, aplicativos móveis, websites e APIs para ajudar empresas e empreendedores a atingir seus objetivos de negócios com soluções tecnológicas inovadoras.",
+        "description": "I offer custom software development services, mobile applications, websites, and APIs to assist businesses and entrepreneurs in achieving their business objectives with innovative technological solutions.",
         "cardWebDevelopment": {
             "title": "Web Development",
             "description": "Your online presence starts here - we create custom web applications to take your business to the next level."
@@ -39,7 +42,7 @@
             "description": "No matter the size or complexity of your business challenge - I'm here to offer customized software solutions that meet your unique needs."
         },
         "cardInstutionalWebSites": {
-            "title": "Instutional WebSites",
+            "title": "Instutional Websites",
             "description": "I design responsive and elegant institutional websites that highlight the unique identity of your brand, providing your visitors with an intuitive and engaging experience that leads them to become loyal customers."
         },
         "cardLandingPages": {
@@ -51,11 +54,12 @@
         "badge": "PROJECTS",
         "title": "My Featured Projects",
         "description": "Check out my web development and technology projects. I present some of my best work, created with skill and innovation to meet clients' objectives.",
+        "btnAll": "All",
         "cardBestJobs": {
             "description": "BestJob is an online platform that connects freelancers with clients worldwide, offering a wide variety of job opportunities in various areas. With easy-to-use tools, users can manage projects, submit proposals, and collaborate directly with clients."
         },
         "cardCrudTasks": {
-            "description": "Este é um projeto de CRUD de tarefas criado com Lumen (PHP) para aprender deploy com Docker. Permite criar, ler, atualizar e deletar tarefas e marcar como concluídas ou não. Com Docker, a aplicação é facilmente instalada e executada em diferentes ambientes, tornando o deploy mais eficiente e rápido."
+            "description": "This is a task CRUD project created with Lumen (PHP) to learn deploy with Docker. It allows creating, reading, updating, and deleting tasks, as well as marking them as completed or not. With Docker, the application can be easily installed and run in different environments, making the deployment more efficient and faster."
         },
         "btnCards": "View Code"
     },

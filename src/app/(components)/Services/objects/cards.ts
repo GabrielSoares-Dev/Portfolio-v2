@@ -1,47 +1,71 @@
-import { CardServicesProps } from '../components/Card/types'
 import { FaCode, FaGlobe, FaClipboardList } from 'react-icons/fa'
 import { AiOutlineApi } from 'react-icons/ai'
 import { IoIosPhonePortrait } from 'react-icons/io'
 import { BsFileEarmarkText } from 'react-icons/bs'
+import type { Language } from '@/context/types'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
+import { checkIsLanguage } from '@/functions'
 
-interface ICards extends CardServicesProps {
-  id: number
-}
-const Cards: ICards[] = [
+const Cards = (currentLanguage: Language) => [
   {
     id: 1,
-    title: 'Desenvolvimento Web',
-    text: 'Sua presença online começa aqui - criamos aplicativos web personalizados para levar sua empresa para o próximo nível.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardWebDevelopment.title
+      : en.services.cardWebDevelopment.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardWebDevelopment.description
+      : en.services.cardWebDevelopment.description,
     Icon: FaGlobe,
   },
   {
     id: 2,
-    title: 'Desenvolvimento de APIs',
-    text: 'Conecte seus aplicativos, sistemas e dispositivos com facilidade e eficiência, com meu serviço de desenvolvimento de API sob medida.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardApiDevelopment.title
+      : en.services.cardApiDevelopment.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardApiDevelopment.description
+      : en.services.cardApiDevelopment.description,
     Icon: AiOutlineApi,
   },
   {
     id: 3,
-    title: 'Desenvolvimento de Apps Móveis',
-    text: 'Transforme suas ideias em realidade e alcance novos públicos com meu serviço de desenvolvimento de aplicativos móveis intuitivos e poderosos.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardMobileDevelopment.title
+      : en.services.cardMobileDevelopment.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardMobileDevelopment.description
+      : en.services.cardMobileDevelopment.description,
     Icon: IoIosPhonePortrait,
   },
   {
     id: 4,
-    title: 'Software Personalizado',
-    text: 'Não importa o tamanho ou a complexidade do seu desafio de negócios - estou aqui para oferecer soluções personalizadas de software que atendem às suas necessidades exclusivas.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardCustomSoftwareDevelopment.title
+      : en.services.cardCustomSoftwareDevelopment.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardCustomSoftwareDevelopment.description
+      : en.services.cardCustomSoftwareDevelopment.description,
     Icon: FaCode,
   },
   {
     id: 5,
-    title: 'Sites Institucionais',
-    text: 'Eu projeto sites institucionais responsivos e elegantes que destacam a identidade única de sua marca, fornecendo a seus visitantes uma experiência intuitiva e cativante que os leva a converter em clientes leais.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardInstutionalWebSites.title
+      : en.services.cardInstutionalWebSites.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardInstutionalWebSites.description
+      : en.services.cardInstutionalWebSites.description,
     Icon: BsFileEarmarkText,
   },
   {
     id: 6,
-    title: 'Landing Pages',
-    text: 'Ofereço soluções personalizadas de Landing Pages para aumentar a conversão de seus visitantes em clientes, construindo uma experiência online intuitiva e impactante que mantém seu público engajado e leva seu negócio para o próximo nível.',
+    title: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardLandingPages.title
+      : en.services.cardLandingPages.title,
+    text: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.services.cardLandingPages.description
+      : en.services.cardLandingPages.description,
     Icon: FaClipboardList,
   },
 ]

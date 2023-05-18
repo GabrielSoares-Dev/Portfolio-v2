@@ -1,2 +1,3 @@
-export { PageContext, PageContextProvider } from './PageContext/PageContext'
-export { ThemeContext, ThemeContextProvider } from './ThemeContext/ThemeContext'
+export { PageContext, PageContextProvider } from './PageContext'
+export { ThemeContext, ThemeContextProvider } from './ThemeContext'
+export { LanguageContext, LanguageContextProvider } from './LanguageContext'

@@ -1,7 +1,7 @@
 'use client'
 import { useRef, useEffect, useState } from 'react'
 import { useInView, useAnimation } from 'framer-motion'
-import { usePage, useTheme } from '@/hooks'
+import { useLanguage, usePage, useTheme } from '@/hooks'
 
 export function useSkills() {
   const controls = useAnimation()
@@ -9,6 +9,7 @@ export function useSkills() {
   const ref = useRef(null)
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
+  const { currentLanguage } = useLanguage()
   const { theme } = useTheme()
   const enabledForAnimation = isInView && animationCount === 0
 
@@ -25,5 +26,6 @@ export function useSkills() {
     ref,
     controls,
     theme,
+    currentLanguage,
   }
 }

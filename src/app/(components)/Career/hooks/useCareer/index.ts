@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { usePage, useTheme } from '@/hooks'
+import { useLanguage, usePage, useTheme } from '@/hooks'
 import { useAnimation, useInView } from 'framer-motion'
 
 export function useCareer() {
@@ -10,6 +10,7 @@ export function useCareer() {
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
   const enabledForAnimation = isInView && animationCount === 0
 
   useEffect(() => {
@@ -25,5 +26,6 @@ export function useCareer() {
     ref,
     controls,
     theme,
+    currentLanguage,
   }
 }
