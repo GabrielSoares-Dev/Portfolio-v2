@@ -8,3 +8,9 @@ export type {
   PageContextProviderProps,
   currentPageType,
 } from './page-context-props'
+
+export type {
+  LanguageContextProps,
+  LanguageContextProviderProps,
+  Language,
+} from './language-context-props'

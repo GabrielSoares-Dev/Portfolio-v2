@@ -1,16 +1,17 @@
 'use client'
-import { useEffect, useRef, useCallback } from 'react'
-import { usePage, useTheme } from '@/hooks'
+import { useEffect, useRef, useCallback, useState } from 'react'
+import { useLanguage, usePage, useTheme } from '@/hooks'
 import { loadFull } from 'tsparticles'
 import type { Container, Engine } from 'tsparticles-engine'
 import { useInView } from 'framer-motion'
 
 export function useIntroduction() {
+  const [typeAnimationKey, setTypeAnimationKey] = useState(0)
   const ref = useRef(null)
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
-
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine)
@@ -25,11 +26,14 @@ export function useIntroduction() {
     if (isInView) {
       setCurrentPage('INTRODUCTION')
     }
-  }, [isInView, theme])
+    setTypeAnimationKey(typeAnimationKey + 1)
+  }, [isInView, theme, currentLanguage])
 
   return {
     ref,
     theme,
+    currentLanguage,
+    typeAnimationKey,
     particlesInit,
     particlesLoaded,
   }

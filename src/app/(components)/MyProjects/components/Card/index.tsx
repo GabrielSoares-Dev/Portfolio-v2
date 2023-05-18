@@ -1,11 +1,13 @@
 'use client'
 import Image from 'next/image'
-import Button from '@/components/Button'
+import { Button } from '@/components'
 import { CardProjectProps } from '@app/(components)/MyProjects/types'
 import { cardAnimation } from '@app/(components)/MyProjects/animations'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useTheme } from '@/hooks'
-import { checkIsTheme } from '@/functions'
+import { useLanguage, useTheme } from '@/hooks'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export function CardProject({
   title,
@@ -15,6 +17,7 @@ export function CardProject({
   animation,
 }: CardProjectProps) {
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
   return (
     <AnimatePresence>
       <motion.div
@@ -52,7 +55,11 @@ export function CardProject({
 
         <div className="w-full md:w-32">
           <Button
-            label="Ver Código"
+            label={
+              checkIsLanguage(currentLanguage, 'PT-BR')
+                ? ptBr.projects.btnCards
+                : en.projects.btnCards
+            }
             onClick={() => window.open(url)}
             variant="secondary"
           />

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import { useIntroduction } from './hooks'
-import Button from '@/components/Button'
+import { Button } from '@/components'
 import Lottie from 'react-lottie'
 import options from '@/constants/developer-animation-options'
 import { TypeAnimation } from 'react-type-animation'
@@ -16,10 +16,19 @@ import {
   buttonMyWorkAnimation,
   lottieAnimation,
 } from './animations'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export default function Introduction() {
-  const { ref, theme, particlesInit, particlesLoaded } = useIntroduction()
+  const {
+    ref,
+    theme,
+    currentLanguage,
+    typeAnimationKey,
+    particlesInit,
+    particlesLoaded,
+  } = useIntroduction()
 
   return (
     <div
@@ -47,19 +56,31 @@ export default function Introduction() {
               className="mb-5"
             >
               <TypeAnimation
-                sequence={[
-                  'Desenvolvedor FullStack',
-                  1000,
-                  'Desenvolvedor Mobile',
-                  2000,
-                  'Desenvolvedor Backend',
-                  3000,
-                  'Desenvolvedor Frontend',
-                ]}
+                sequence={
+                  checkIsLanguage(currentLanguage, 'PT-BR')
+                    ? [
+                        ptBr.introduction.title.devFullStack,
+                        3000,
+                        ptBr.introduction.title.devMobile,
+                        4000,
+                        ptBr.introduction.title.devBackend,
+                        5000,
+                        ptBr.introduction.title.devFrontend,
+                      ]
+                    : [
+                        en.introduction.title.devFullStack,
+                        3000,
+                        en.introduction.title.devMobile,
+                        4000,
+                        en.introduction.title.devBackend,
+                        5000,
+                        en.introduction.title.devFrontend,
+                      ]
+                }
                 wrapper="span"
                 cursor={true}
                 repeat={Infinity}
-                key={theme}
+                key={typeAnimationKey}
                 className={` ${
                   checkIsTheme(theme, 'DARK')
                     ? 'text-secondary-dark'
@@ -74,10 +95,9 @@ export default function Introduction() {
               transition={descriptionAnimation.transition}
               className="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg"
             >
-              Desenvolver é minha paixão. Transformar ideias em realidade é o
-              que me move. A cada código escrito, a cada problema resolvido,
-              sinto-me mais próximo do meu propósito. Não é apenas uma
-              profissão, é um estilo de vida.
+              {checkIsLanguage(currentLanguage, 'PT-BR')
+                ? ptBr.introduction.description
+                : en.introduction.description}
             </motion.p>
             <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
               <motion.a
@@ -87,7 +107,14 @@ export default function Introduction() {
                 transition={buttonMyWorkAnimation.transition}
                 className="w-full sm:w-28"
               >
-                <Button label="Meu trabalho" variant="primary" />
+                <Button
+                  label={
+                    checkIsLanguage(currentLanguage, 'PT-BR')
+                      ? ptBr.introduction.btnMyWork
+                      : en.introduction.btnMyWork
+                  }
+                  variant="primary"
+                />
               </motion.a>
               <motion.a
                 href="#contact"
@@ -96,7 +123,14 @@ export default function Introduction() {
                 transition={buttonContactAnimation.transition}
                 className="w-full sm:w-28"
               >
-                <Button label="Contate-me" variant="secondary" />
+                <Button
+                  label={
+                    checkIsLanguage(currentLanguage, 'PT-BR')
+                      ? ptBr.introduction.btnContactMe
+                      : en.introduction.btnContactMe
+                  }
+                  variant="secondary"
+                />
               </motion.a>
             </div>
           </div>

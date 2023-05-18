@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { usePage, useTheme } from '@/hooks'
+import { useLanguage, usePage, useTheme } from '@/hooks'
 import { useInView, useAnimation } from 'framer-motion'
 
 export function useContact() {
@@ -10,6 +10,7 @@ export function useContact() {
   const isInView = useInView(ref)
   const { setCurrentPage } = usePage()
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
   const enabledForAnimation = isInView && animationCount === 0
 
   useEffect(() => {
@@ -26,5 +27,6 @@ export function useContact() {
     ref,
     controls,
     theme,
+    currentLanguage,
   }
 }

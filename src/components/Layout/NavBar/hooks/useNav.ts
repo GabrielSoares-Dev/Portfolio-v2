@@ -1,15 +1,15 @@
 'use client'
 import { useState } from 'react'
 import { currentPageType } from '@/context/types'
-import { usePage, useTheme } from '@/hooks'
+import { useLanguage, usePage, useTheme } from '@/hooks'
 
 export default function useNav() {
   const { currentPage, setCurrentPage } = usePage()
   const { handleTheme, theme } = useTheme()
+  const { handleLanguage, currentLanguage } = useLanguage()
   const [openNav, setOpenNav] = useState(false)
 
   const isIntroduction = currentPage === 'INTRODUCTION'
-  const isAbout = currentPage === 'ABOUT'
   const isServices = currentPage === 'SERVICES'
   const isProjects = currentPage === 'PROJECTS'
   const isCareer = currentPage === 'CAREER'
@@ -27,7 +27,6 @@ export default function useNav() {
   }
 
   return {
-    isAbout,
     isIntroduction,
     isServices,
     isProjects,
@@ -36,9 +35,11 @@ export default function useNav() {
     isSkills,
     openNav,
     theme,
+    currentLanguage,
     handleOpenNav,
     handleChangeSection,
     handleNavigateMobile,
     handleTheme,
+    handleLanguage,
   }
 }

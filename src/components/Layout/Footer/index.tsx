@@ -1,7 +1,9 @@
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
 import { useFooter } from './hooks'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 export default function Footer() {
-  const { theme } = useFooter()
+  const { theme, currentLanguage } = useFooter()
   return (
     <section
       className={`relative transition duration-500 ${
@@ -25,7 +27,9 @@ export default function Footer() {
               : 'text-secondary-white'
           }`}
         >
-          © 2021 Gabriel S.Maciel. Todos direitos reservados.
+          {checkIsLanguage(currentLanguage, 'PT-BR')
+            ? ptBr.footer.text
+            : en.footer.text}
         </p>
       </div>
     </section>

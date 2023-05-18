@@ -1,4 +1,7 @@
 {
+    "metaData": {
+        "description": "Gabriel Soares Maciel, desenvolvedor full-stack com 2 anos de experiência em projetos web e mobile. Meu portfólio apresenta uma seleção dos meus melhores trabalhos, que incluem desenvolvimento de aplicativos, websites, sistemas de gerenciamento de conteúdo e outras soluções personalizadas. Com habilidades em diversas linguagens de programação e ferramentas, estou preparado para oferecer soluções eficientes e de alta qualidade para atender às necessidades de seus projetos digitais. Confira meu portfólio e entre em contato para saber mais sobre como posso ajudá-lo a alcançar seus objetivos online."
+    },
     "menu": {
         "linkHome": "HOME",
         "linkServices": "SERVIÇOS",
@@ -40,7 +43,7 @@
         },
         "cardInstutionalWebSites": {
             "title": "Sites Institucionais",
-            "description": "Eu projeto sites institucionais responsivos e elegantes que destacam a identidade única de sua marca, fornecendo a seus visitantes uma experiência intuitiva e cativante que os leva a converter em clientes leais."
+            "description": "Projeto sites institucionais responsivos e elegantes que destacam a identidade única de sua marca, fornecendo a seus visitantes uma experiência intuitiva e cativante que os leva a converter em clientes leais."
         },
         "cardLandingPages": {
             "title": "Landing Pages",
@@ -51,6 +54,7 @@
         "badge": "PROJETOS",
         "title": "Meus Projetos em Destaque",
         "description": "Confira meus projetos em desenvolvimento web e tecnologia. Apresento alguns dos meus melhores trabalhos, criados com habilidade e inovação para atender aos objetivos dos clientes.",
+        "btnAll":"Todos",
         "cardBestJobs": {
             "description": "BestJob é uma plataforma online que conecta freelancers com clientes em todo o mundo, oferecendo uma ampla variedade de oportunidades de trabalho em diversas áreas. Com ferramentas fáceis de usar, os usuários podem gerenciar projetos, enviar propostas e colaborar diretamente com clientes.."
         },

@@ -1,7 +1,8 @@
-import { useTheme } from '@/hooks'
+import { useLanguage, useTheme } from '@/hooks'
 
 export function useFooter() {
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
 
-  return { theme }
+  return { theme, currentLanguage }
 }

@@ -3,10 +3,13 @@ import { BiMenu } from 'react-icons/bi'
 import { IoMdClose } from 'react-icons/io'
 import { NavLinkMobile } from '@/components/NavLink'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Button } from '@/components'
 import useNav from '@/components/Layout/NavBar/hooks/useNav'
-import { checkIsTheme } from '@/functions'
+import { checkIsTheme, checkIsLanguage } from '@/functions'
 import { MdDarkMode } from 'react-icons/md'
 import { BsFillSunFill } from 'react-icons/bs'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
 
 export function Mobile() {
   const {
@@ -18,9 +21,11 @@ export function Mobile() {
     isServices,
     isSkills,
     theme,
+    currentLanguage,
     handleOpenNav,
     handleNavigateMobile,
     handleTheme,
+    handleLanguage,
   } = useNav()
   return (
     <section
@@ -72,14 +77,31 @@ export function Mobile() {
                       SOARES
                     </h1>
                   </a>
-                  <div className="mt-10">
+                  <div className="w-16 mt-10">
+                    <Button
+                      variant="secondary"
+                      label={
+                        checkIsLanguage(currentLanguage, 'PT-BR')
+                          ? 'PT-BR'
+                          : 'EN'
+                      }
+                      onClick={() =>
+                        handleLanguage(
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? 'EN'
+                            : 'PT-BR',
+                        )
+                      }
+                    />
+                  </div>
+                  <div className="mt-5">
                     <div
                       onClick={() =>
                         handleTheme(
                           checkIsTheme(theme, 'DARK') ? 'WHITE' : 'DARK',
                         )
                       }
-                      className={`w-7 mb-[30px] border-2 border-primary p-1 rounded-3xl transition duration-500 ${
+                      className={`w-7 mb-[20px] border-2 h-max border-primary p-1 rounded-3xl transition duration-500 ${
                         checkIsTheme(theme, 'DARK')
                           ? 'bg-primary-dark'
                           : 'bg-primary-white'
@@ -93,12 +115,17 @@ export function Mobile() {
                         <BsFillSunFill className="fill-primary text-lg transition duration-500" />
                       )}
                     </div>
+
                     <div className="mt-2">
                       <NavLinkMobile
                         href="#introduction"
                         onClick={() => handleNavigateMobile('INTRODUCTION')}
                         isActive={isIntroduction}
-                        label="HOME"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkHome
+                            : en.menu.linkHome
+                        }
                       />
                     </div>
                     <div className="mt-2">
@@ -106,7 +133,11 @@ export function Mobile() {
                         href="#services"
                         onClick={() => handleNavigateMobile('SERVICES')}
                         isActive={isServices}
-                        label="SERVIÇOS"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkServices
+                            : en.menu.linkServices
+                        }
                       />
                     </div>
                     <div className="mt-2">
@@ -114,7 +145,11 @@ export function Mobile() {
                         href="#projects"
                         onClick={() => handleNavigateMobile('PROJECTS')}
                         isActive={isProjects}
-                        label="PROJETOS"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkProjects
+                            : en.menu.linkProjects
+                        }
                       />
                     </div>
                     <div className="mt-2">
@@ -122,7 +157,11 @@ export function Mobile() {
                         href="#skills"
                         onClick={() => handleNavigateMobile('SKILLS')}
                         isActive={isSkills}
-                        label="HABILIDADES"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkSkills
+                            : en.menu.linkSkills
+                        }
                       />
                     </div>
                     <div className="mt-2">
@@ -130,7 +169,11 @@ export function Mobile() {
                         href="#career"
                         onClick={() => handleNavigateMobile('CAREER')}
                         isActive={isCareer}
-                        label="EXPERIÊNCIA"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkCareer
+                            : en.menu.linkCareer
+                        }
                       />
                     </div>
                     <div className="mt-2">
@@ -138,7 +181,11 @@ export function Mobile() {
                         href="#contact"
                         onClick={() => handleNavigateMobile('CONTACT')}
                         isActive={isContact}
-                        label="CONTATO"
+                        label={
+                          checkIsLanguage(currentLanguage, 'PT-BR')
+                            ? ptBr.menu.linkContact
+                            : en.menu.linkContact
+                        }
                       />
                     </div>
                   </div>

@@ -1,15 +1,20 @@
 import { CardProjectProps } from '@app/(components)/MyProjects/types'
+import type { Language } from '@/context/types'
+import en from '@public/locales/en/home.json'
+import ptBr from '@public/locales/pt/home.json'
+import { checkIsLanguage } from '@/functions'
 
 type CardProjectObject = CardProjectProps & {
   id: number
   stack: 'LARAVEL' | 'NODEJS'
 }
-export const projects: CardProjectObject[] = [
+export const projects = (currentLanguage: Language): CardProjectObject[] => [
   {
     id: 1,
     title: 'BestJobs',
-    description:
-      'BestJob é uma plataforma online que conecta freelancers com clientes em todo o mundo, oferecendo uma ampla variedade de oportunidades de trabalho em diversas áreas. Com ferramentas fáceis de usar, os usuários podem gerenciar projetos, enviar propostas e colaborar diretamente com clientes.',
+    description: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.projects.cardBestJobs.description
+      : en.projects.cardBestJobs.description,
     image: '/images/best-jobs.jpeg',
     stack: 'NODEJS',
     url: 'https://github.com/GabrielSoares-Dev/BestJobs',
@@ -17,8 +22,9 @@ export const projects: CardProjectObject[] = [
   {
     id: 2,
     title: 'Crud Tasks',
-    description:
-      'Este é um projeto de CRUD de tarefas criado com Lumen (PHP) para aprender deploy com Docker. Permite criar, ler, atualizar e deletar tarefas e marcar como concluídas ou não. Com Docker, a aplicação é facilmente instalada e executada em diferentes ambientes, tornando o deploy mais eficiente e rápido.',
+    description: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.projects.cardCrudTasks.description
+      : en.projects.cardCrudTasks.description,
     image: '/images/best-jobs.jpeg',
     stack: 'LARAVEL',
     url: 'https://github.com/GabrielSoares-Dev/Crud-Tasks',
