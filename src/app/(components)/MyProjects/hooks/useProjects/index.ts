@@ -2,27 +2,32 @@
 import { useRef, useEffect, useState } from 'react'
 import { useInView, useAnimation } from 'framer-motion'
 import { useFiltersStore, useScrollStore } from '@/store/modules'
-import { projects } from '@app/(components)/MyProjects/objects'
 import { useLanguage, usePage, useTheme } from '@/hooks'
-
+import { getMyProjectsService } from '@/services'
+import { useQuery } from '@tanstack/react-query'
 export function useProjects() {
-  const { filter } = useFiltersStore()
-  const controls = useAnimation()
   const [animationCount, setAnimationCount] = useState(0)
-
+  const { filter } = useFiltersStore()
+  const { currentLanguage } = useLanguage()
+  const controls = useAnimation()
+  const { setCurrentPage } = usePage()
   const ref = useRef(null)
   const isInView = useInView(ref)
-  const { setCurrentPage } = usePage()
-  const { currentLanguage } = useLanguage()
-  const { setScrollToTop } = useScrollStore()
   const { theme } = useTheme()
-  const enabledForAnimation = isInView && animationCount === 0
-  const hasFilter = filter !== 'ALL'
-
-  const projectFiltered = projects(currentLanguage).filter((value) =>
-    value.stack.includes(filter),
-  )
-
+  const { setScrollToTop } = useScrollStore()
+  const {
+    data: projects,
+    isLoading,
+    isSuccess,
+  } = useQuery({
+    queryKey: ['my-projects', currentLanguage, filter],
+    queryFn: () =>
+      getMyProjectsService({
+        filter,
+        language: currentLanguage,
+      }),
+  })
+  const enabledForAnimation = (isInView && animationCount === 0) || isSuccess
   useEffect(() => {
     if (enabledForAnimation) {
       controls.start('animate')
@@ -32,13 +37,14 @@ export function useProjects() {
       setCurrentPage('PROJECTS')
       setScrollToTop(true)
     }
-  }, [isInView, animationCount])
+  }, [isInView, animationCount, isSuccess])
+
   return {
     ref,
     controls,
-    hasFilter,
-    projectFiltered,
     theme,
     currentLanguage,
+    projects,
+    isLoading,
   }
 }
