@@ -1,7 +1,6 @@
 'use client'
 import { CardProject, Filters } from '@app/(components)/MyProjects/components'
 import Badge from '@/components/Badge'
-import { projects } from '@app/(components)/MyProjects/objects'
 import { useProjects } from '@app/(components)/MyProjects/hooks'
 import {
   titleAnimation,
@@ -12,9 +11,11 @@ import { motion } from 'framer-motion'
 import { checkIsTheme, checkIsLanguage } from '@/functions'
 import en from '@public/locales/en/home.json'
 import ptBr from '@public/locales/pt/home.json'
+
 export function Content() {
-  const { ref, hasFilter, projectFiltered, controls, theme, currentLanguage } =
+  const { ref, controls, theme, currentLanguage, projects, isLoading } =
     useProjects()
+
   return (
     <div className="container px-4 mx-auto">
       <div ref={ref} className="md:max-w-5xl mx-auto mb-8 md:mb-16 text-center">
@@ -70,39 +71,24 @@ export function Content() {
         </motion.p>
       </div>
       <Filters controls={controls} />
-      <div className="flex items-center flex-wrap mx-4 mb-12 md:mb-20">
-        <>
-          {hasFilter ? (
-            projectFiltered.map((element) => (
-              <CardProject
-                animation={{
-                  controls,
-                }}
-                url={element.url}
-                key={element.id}
-                title={element.title}
-                description={element.description}
-                image={element.image}
-              />
-            ))
-          ) : (
-            <>
-              {projects(currentLanguage).map((element) => (
-                <CardProject
-                  animation={{
-                    controls,
-                  }}
-                  key={element.id}
-                  url={element.url}
-                  title={element.title}
-                  description={element.description}
-                  image={element.image}
-                />
-              ))}
-            </>
-          )}
-        </>
-      </div>
+      {!isLoading && (
+        <div className="flex items-center flex-wrap mx-4 mb-12 md:mb-20">
+          {projects!.map((element) => (
+            <CardProject
+              animation={{
+                controls,
+              }}
+              height={element.height}
+              width={element.width}
+              key={element.id}
+              url={element.url}
+              title={element.title}
+              description={element.description}
+              image={element.image}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }

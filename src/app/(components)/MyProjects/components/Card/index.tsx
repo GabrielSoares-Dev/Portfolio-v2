@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { Button } from '@/components'
 import { CardProjectProps } from '@app/(components)/MyProjects/types'
-import { cardAnimation } from '@app/(components)/MyProjects/animations'
+// import { cardAnimation } from '@app/(components)/MyProjects/animations'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useLanguage, useTheme } from '@/hooks'
 import { checkIsTheme, checkIsLanguage } from '@/functions'
@@ -14,27 +14,20 @@ export function CardProject({
   description,
   image,
   url,
+  height,
+  width,
   animation,
 }: CardProjectProps) {
   const { theme } = useTheme()
   const { currentLanguage } = useLanguage()
   return (
     <AnimatePresence>
-      <motion.div
-        initial="initial"
-        variants={cardAnimation}
-        animate={animation?.controls}
-        transition={{
-          duration: 0.5,
-          delay: 0.1,
-        }}
-        className="w-full md:w-1/2 px-4 mb-8"
-      >
+      <motion.div className="w-full md:w-1/2 px-4 mb-8">
         <div className="w-auto">
           <Image
             className="rounded-lg"
-            width={500}
-            height={500}
+            width={width}
+            height={height}
             src={image}
             alt=""
           />

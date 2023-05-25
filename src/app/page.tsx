@@ -6,7 +6,6 @@ import Career from '@/app/(components)/Career'
 import MyProjects from '@/app/(components)/MyProjects'
 import ptBr from '@public/locales/pt/home.json'
 
-// @ts-ignore
 export const metadata = {
   title: 'Gabriel | Dev Full Stack',
   icons: {
@@ -15,7 +14,7 @@ export const metadata = {
   description: ptBr.metaData.description,
 }
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>
       <Introduction />
