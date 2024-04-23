@@ -57,17 +57,19 @@ export default function Career() {
               : en.career.title}
           </motion.h3>
         </div>
-        {experiences(currentLanguage).map((element) => (
-          <CardExperience
-            animation={{
-              controls,
-            }}
-            key={element.id}
-            dateInPosition={element.dateInPosition}
-            position={element.position}
-            where={element.where}
-          />
-        ))}
+        <div className="flex flex-col gap-10">
+          {experiences(currentLanguage).map((element) => (
+            <CardExperience
+              animation={{
+                controls,
+              }}
+              key={element.id}
+              dateInPosition={element.dateInPosition}
+              position={element.position}
+              where={element.where}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -7,11 +7,26 @@ export const experiences = (currentLanguage: Language) => [
   {
     id: 1,
     position: checkIsLanguage(currentLanguage, 'PT-BR')
-      ? ptBr.career.cardLoginTecnologies.position
-      : en.career.cardLoginTecnologies.position,
+      ? ptBr.career.stefanini.position
+      : en.career.stefanini.position,
     dateInPosition: checkIsLanguage(currentLanguage, 'PT-BR')
-      ? ptBr.career.cardLoginTecnologies.date
-      : en.career.cardLoginTecnologies.date,
+      ? ptBr.career.stefanini.date
+      : en.career.stefanini.date,
+    where: {
+      city: 'Jaguariúna',
+      district: 'Centro',
+      nameCompany: 'Stefanini',
+      state: 'São Paulo',
+    },
+  },
+  {
+    id: 2,
+    position: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.career.login.position
+      : en.career.login.position,
+    dateInPosition: checkIsLanguage(currentLanguage, 'PT-BR')
+      ? ptBr.career.login.date
+      : en.career.login.date,
     where: {
       city: 'Barueri',
       district: 'Alphaville',

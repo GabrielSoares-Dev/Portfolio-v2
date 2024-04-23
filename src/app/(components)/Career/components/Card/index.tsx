@@ -19,7 +19,7 @@ export default function CardExperience({
         duration: 0.2,
         delay: 1,
       }}
-      className="max-w-3xl mx-auto"
+      className="max-w-3xl mx-auto w-full"
     >
       <motion.div
         whileHover={{
