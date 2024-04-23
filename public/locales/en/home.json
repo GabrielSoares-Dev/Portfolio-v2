@@ -69,10 +69,14 @@
     "career": {
         "badge": "CAREER",
         "title": "Professional Experience",
-        "cardLoginTecnologies": {
+        "stefanini":{
+            "position": "Mid Full Stack Developer",
+            "date": "08/10/2023 - moment"
+        },
+        "login": {
             "position": "Junior Full Stack Developer",
-            "date": "26/01/2022 -  moment"
-        }
+            "date": "26/01/2022 - 31/09/2023"
+        }  
     },
     "contact": {
         "badge": "CONTACT",
