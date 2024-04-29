@@ -4,5 +4,9 @@ export function useFooter() {
   const { theme } = useTheme()
   const { currentLanguage } = useLanguage()
 
-  return { theme, currentLanguage }
+  const now = new Date()
+
+  const currentYear = now.getFullYear()
+
+  return { theme, currentLanguage, currentYear }
 }
